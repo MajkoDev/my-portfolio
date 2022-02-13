@@ -1,3 +1,5 @@
+import Navbar from '../components/Navbar'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -12,9 +14,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+      <Navbar />
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Home Page</a>
         </h1>
+        
+        
 
         <p className={styles.description}>
           Get started by editing{' '}
