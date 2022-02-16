@@ -5,17 +5,15 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-
       <nav className={styles.navbar}>
         {/* LOGO */}
         <h1 className={styles.logo}>
-          <a href=''>mDev</a>
+          <a href="./" >mDev</a>
         </h1>
 
         {/* MENU */}
         <div className={styles.navMenu}>
           <ul className={styles.navList}>
-
             <li className={styles.navItem}>
               <Link href='/'>Home</Link>
             </li>
@@ -33,15 +31,12 @@ const Header = () => {
             </li>
           </ul>
 
-{/*  BUTTONS */}
-<div className={styles.navBtn}>
-          {/* Button for Theme Light/Dark */}
-          {/* Button for Toggle Menu */}
-
+          {/*  BUTTONS */}
+          <div className={styles.navBtn}>
+            {/* Button for Theme Light/Dark */}
+            {/* Button for Toggle Menu */}
+          </div>
         </div>
-        </div>
-
-        
       </nav>
     </header>
   );
