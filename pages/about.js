@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 
-import styles from '../styles/Home.module.css'
 
 export default function About() {
     return (
-        <div className={styles.main}>
-            <Navbar />
+        <div>
+            <Header />
+            <br /><br /><br />
             <h1>About Page</h1>
         </div>
     );

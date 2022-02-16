@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 
 import styles from '../styles/Home.module.css'
 
 export default function Contact() {
     return (
         <div className={styles.main}>
-            <Navbar />
+            <Header />
             <h1>Contact Page</h1>
         </div>
     );

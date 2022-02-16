@@ -1,0 +1,22 @@
+.header {
+width: 100%;
+  position: fixed;
+  top: 0;
+  
+}
+.navbar {
+    width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    row-gap: 1.5rem;
+    list-style-type: none;
+}

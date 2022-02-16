@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -13,8 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
       <main className={styles.main}>
-      <Navbar />
+      
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Home Page</a>
         </h1>
