@@ -1,17 +1,24 @@
-import Image from "next/image";
+import { Container, Stack, Heading, Text } from "@chakra-ui/react";
 
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href='https://nextjs.org'>Home Page</a>
-        </h1>
-      </main>
-    </div>
+    <>
+      <Container maxW='container.lg' padding={0}>
+        <Stack
+          textAlign='center'
+          spacing={{ base: 8, md: 14 }}
+          py={{ base: 20, md: 36 }}>
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}>
+            Volám sa, <br />
+            <Text color='blue.700'>Marian.</Text>
+          </Heading>
+        </Stack>
+      </Container>
+    </>
   );
 }
