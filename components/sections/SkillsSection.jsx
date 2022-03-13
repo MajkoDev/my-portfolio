@@ -1,4 +1,15 @@
-import { Heading, Text, Stack, Flex, Container } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Stack,
+  Flex,
+  Container,
+  Image,
+  Box,
+  List,
+  ListItem,
+  VStack,
+} from "@chakra-ui/react";
 
 const SkillsSection = () => {
   return (
@@ -10,21 +21,65 @@ const SkillsSection = () => {
         <Text fontSize='lg'>vedomosti, skusenosti</Text>
       </Stack>
 
-      <Flex wrap='auto'
-        direction={{ base: "column", md: "row" }}
-        align={{ base: "center", md: "start" }}
-        justify='center'
-        w={{ base: "100%", md: "100%" }}>
+      <VStack alignItems={{ base: "center", md: "start" }}>
+        <Container
+          maxW='sm'
+          minH={125}
+          border='2px'
+          borderColor='blue.300'
+          borderRadius={12}
+          w={356}
+          m={2}
+          p={2}>
+          <Heading fontSize='md'>základy web vývoja.</Heading>
+          <List fontSize='sm'>
+            <ListItem>poznám html, css, javascript</ListItem>
+            <ListItem>
+              stále viac a viac sa učím javascript, <br />
+              keďže ho využívam na aplikácie a projekty{" "}
+            </ListItem>
+          </List>
+        </Container>
+      </VStack>
 
-            <Container bg='blue.100' w={356} h={125} m={2}>
-            </Container>
+      <VStack alignItems={{ base: "center", md: "center" }}>
+        <Container
+          maxW='sm'
+          minH={125}
+          border='2px'
+          borderColor='blue.300'
+          borderRadius={12}
+          w={356}
+          m={2}
+          p={2}>
+          <Heading fontSize='md'>dizajnovanie.</Heading>
+          <List fontSize='sm'>
+            <ListItem>viem Css, milujem Sass</ListItem>
+            <ListItem>navrhujem v softwari Figma</ListItem>
+            <ListItem>využil som aj bootstrap, tailwind, chakra,…</ListItem>
+            <ListItem>pri React skúšam Storybook, Emotion</ListItem>
+          </List>
+        </Container>
+      </VStack>
 
-            <Container bg='blue.100' w={356} h='full' m={2}>
-            </Container>
-
-            <Container bg='blue.100' w={356} h={125} m={2}>
-            </Container>
-        </Flex>
+      <VStack alignItems={{ base: "center", md: "end" }}>
+        <Container
+          maxW='sm'
+          minH={125}
+          border='2px'
+          borderColor='blue.300'
+          borderRadius={12}
+          w={356}
+          m={2}
+          p={2}>
+          <Heading fontSize='md'>Front-End.</Heading>
+          <List fontSize='sm'>
+            <ListItem>venujem sa Reactu a jeho ekosystem</ListItem>
+            <ListItem>poznám základy, kontext, hooks, router</ListItem>
+            <ListItem>pracoval som s Next.js a aj Gatsby</ListItem>
+          </List>
+        </Container>
+      </VStack>
     </Stack>
   );
 };

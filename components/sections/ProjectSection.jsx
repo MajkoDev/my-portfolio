@@ -2,7 +2,7 @@ import { Heading, Stack } from "@chakra-ui/react"
 
 const ProjectSection = () => {
     return(
-        <Stack>
+        <Stack id='portfolio-section'>
             <Heading>Project Section</Heading>
         </Stack>
     )
