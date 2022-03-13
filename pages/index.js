@@ -1,7 +1,6 @@
 import { Container, Stack, Heading, Text } from "@chakra-ui/react";
 
-import Image from "next/image";
-import Head from "next/head";
+
 
 export default function Home() {
   return (
