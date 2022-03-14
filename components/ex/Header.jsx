@@ -1,5 +1,4 @@
 import {
-  Image,
   Box,
   Flex,
   Button,
@@ -31,12 +30,15 @@ export default function Header() {
             <Button variant='nav'> Contact </Button>
           </Link>
         </HStack>
+
+
         <HStack>
           <Button aria-label={CTA} variant='outline'>
             {CTA}
           </Button>
           <MobileDrawer />
         </HStack>
+
       </Flex>
     </chakra.header>
   );

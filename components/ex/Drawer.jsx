@@ -2,16 +2,17 @@ import React from "react";
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton, Link, Button, 
+  DrawerCloseButton,
+  Link,
+  Button,
   Flex,
   Text,
 } from "@chakra-ui/react";
 
-export default function DrawerExample({isOpen, placement, onClose, childen, btnRef}) {
+export default function DrawerExample({ isOpen, placement, onClose, btnRef }) {
   return (
     <Flex w='full'>
       <Drawer
@@ -20,24 +21,28 @@ export default function DrawerExample({isOpen, placement, onClose, childen, btnR
         onClose={onClose}
         finalFocusRef={btnRef}>
         <DrawerOverlay />
+
         <DrawerContent alignItems='center'>
           <DrawerCloseButton alignSelf='end' mx={5} />
           <DrawerHeader>
             <Text as='p'> Title </Text>
           </DrawerHeader>
           <DrawerBody>
-            
-          <Link>
-            <Button variant='nav'> About </Button>
-          </Link>
-          <Link>
-            <Button variant='nav'> Work </Button>
-          </Link>
-          <Link>
-            <Button variant='nav'> Contact </Button>
-          </Link>
+            <Flex direction='column' alignItems='start' justifyContent='start'>
+              <Link>
+                <Button variant='nav' fontSize='lg'>
+                  {" "}
+                  About{" "}
+                </Button>
+              </Link>
+              <Link>
+                <Button variant='nav'> Work </Button>
+              </Link>
+              <Link>
+                <Button variant='nav'> Contact </Button>
+              </Link>
+            </Flex>
           </DrawerBody>
-
         </DrawerContent>
       </Drawer>
     </Flex>

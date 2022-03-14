@@ -1,6 +1,6 @@
 import { Container, VStack } from "@chakra-ui/react";
 import Footer from "./footer";
-import Header from "./Header";
+import Header from "./ex/Header";
 
 const Layout = ({ children }) => {
   return (
