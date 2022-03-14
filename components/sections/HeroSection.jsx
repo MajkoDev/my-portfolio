@@ -1,6 +1,8 @@
-import { Center, Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Link, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
 const HeroSection = () => {
+
+
   return (
     <Stack
       //   h={{ base: "100vh", md: "60vh" }}
@@ -10,11 +12,16 @@ const HeroSection = () => {
       direction={{ base: "column", md: "row" }}
       alignItems='center'>
 
-      <Stack my={10}>
 
-        <Heading mb={3} as='h1'>
+
+
+      <Stack my={10} direction='column'>
+
+        {/* <Heading mb={3} fontSize='5xl'>
           Volám sa, <br /> Marian.{" "}
-        </Heading>
+        </Heading> */}
+        <Text fontSize='4xl' mb={0}>Volám sa,</Text>
+        <Heading fontSize='7xl' >Marian.</Heading>
 
         <Text as='h3'>
           <strong> front-end (samouk) developer </strong> zo západného

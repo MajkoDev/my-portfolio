@@ -5,16 +5,15 @@ import {
   useColorMode,
   Button,
   useDisclosure,
-  Link,
-  Box,
-  Stack,
-  NavLink,
+  Link
 } from "@chakra-ui/react";
 import { IoMoon, IoSunny, IoMenu, IoClose } from "react-icons/io5";
 import NextLink from "next/link";
 
+import ColorMode from "./hooks/ColorMode";
+
 const Header = () => {
-  const { toggleColorMode, colorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -71,14 +70,7 @@ const Header = () => {
             />
           </HStack>
 
-          <IconButton
-            size='lg'
-            arial-label='toggle menu'
-            variant='ghost'
-            onClick={isOpen ? onClose : onOpen}
-            icon={isOpen ? <IoClose /> : <IoMenu />}
-            display={["flex", "flex", "none", "none"]}
-          />
+          <ColorMode />
         </HStack>
       </HStack>
     </>

@@ -6,14 +6,15 @@ import ProjectSection from '../components/sections/ProjectSection'
 import GithubSection from '../components/sections/GithubSection'
 
 export default function Home() {
+
   return (
-    <>
+    <div  >
       {/* <mobileHeader /> */}
       <HeroSection />
       <AboutSection />
       <SkillsSection />
       <ProjectSection />
       <GithubSection />
-    </>
+    </div>
   );
 }
