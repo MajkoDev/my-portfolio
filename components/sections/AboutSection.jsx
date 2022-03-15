@@ -17,6 +17,7 @@ const AboutSection = () => {
         <Text fontSize='lg'>Čo som schopný o sebe prezradiť?</Text>
       </Stack>
 
+
       <Flex
         direction={{ base: "column", md: "row" }}
         align={{ base: "center", md: "start" }}
