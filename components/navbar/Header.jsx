@@ -1,19 +1,16 @@
 import {
     Heading,
     HStack,
-    IconButton,
-    useColorMode,
     Button,
     useDisclosure,
     Link
   } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { IoMoon, IoSunny} from "react-icons/io5";
 
-import ColorMode from '../hooks/ColorMode'
+import ColorModeBtn from './ColorModeBtn'
+import DrawerMobile from './DrawerMobile'
 
 const Header = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return(
@@ -55,15 +52,12 @@ const Header = () => {
               </Button>
             </NextLink>
 
-            <IconButton
-              arial-label='toggle theme'
-              variant='ghost'
-              size='lg'
-              icon={colorMode === "light" ? <IoMoon /> : <IoSunny />}
-              onClick={toggleColorMode}
-            />
+
+
+            <ColorModeBtn />
 
             </HStack>
+            <DrawerMobile />
         </HStack >
     )
 }
