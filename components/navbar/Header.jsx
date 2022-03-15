@@ -15,11 +15,13 @@ const Header = () => {
 
     return(
         <HStack w='full' py='5'  align='center' justify='space-between'>
-            <Heading size='md'>MajkoDev</Heading>
+          <NextLink href='./' passHref>
+            <Heading size='md' as={Link} _hover={{ textDecor: "none" }}>MajkoDev</Heading>
+            </NextLink>
 
             <HStack spacing='5' display={{ base: "none", md: "flex" }}>
 
-            <NextLink href='./' passHref>
+            <NextLink href='./about' passHref>
               <Button
                 as={Link}
                 p={1}

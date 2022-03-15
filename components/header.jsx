@@ -10,6 +10,8 @@ import {
 import { IoMoon, IoSunny, IoMenu, IoClose } from "react-icons/io5";
 import NextLink from "next/link";
 
+// no function
+
 import ColorMode from "./hooks/ColorMode";
 
 const Header = () => {

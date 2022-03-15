@@ -1,9 +1,13 @@
 import { Stack, Heading } from "@chakra-ui/react";
 
+// Elements
+import SectionTitle from "../elements/SectionTitle";
+
 const SectionGithub = () => {
     return (
         <Stack h='full' w='full'>
-            <Heading>Section with Github</Heading>
+            <SectionTitle title='github.' subtitle='Posledné projekty a repozitoriá.' />
+            
             
         </Stack>
     );
