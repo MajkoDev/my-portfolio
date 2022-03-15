@@ -19,7 +19,7 @@ const Header = () => {
 
             <HStack spacing='5' display={{ base: "none", md: "flex" }}>
 
-            <NextLink href={"#about-section"} passHref>
+            <NextLink href='./' passHref>
               <Button
                 as={Link}
                 p={1}
@@ -30,7 +30,7 @@ const Header = () => {
               </Button>
             </NextLink>
 
-            <NextLink href={"#portfolio-section"} passHref>
+            <NextLink href='./portfolio' passHref>
               <Button
                 as={Link}
                 p={1}
@@ -41,7 +41,7 @@ const Header = () => {
               </Button>
             </NextLink>
 
-            <NextLink href={"#contact-section"}  passHref>
+            <NextLink href='./contact'  passHref>
               <Button
                 as={Link}
                 p={1}
