@@ -1,7 +1,20 @@
-const DrawerMobile = () => {
-    return(
-        <></>
-    )
-}
+import { useRef } from "react";
+import Drawer from "./Drawer";
+import { Button, Flex, useDisclosure } from "@chakra-ui/react";
+import { IoMdMenu } from "react-icons/io";
 
-export default DrawerMobile
+const DrawerMobile = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
+
+  return (
+    <Flex display={{ base: "flex", md: "none" }}>
+      <Button ref={btnRef} onClick={onOpen}>
+        <IoMdMenu size='26px' />
+      </Button>
+      <Drawer isOpen={isOpen} onClose={onClose} finalFocusRef={btnRef} />
+    </Flex>
+  );
+};
+
+export default DrawerMobile;
