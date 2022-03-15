@@ -10,10 +10,12 @@ import {
 const AboutSection = () => {
   return (
     <Stack h='full' w='full'>
+
+
       <Stack
         mb={{ base: "4", md: "10" }}
         alignItems={{ base: "center", md: "start" }}>
-        <Heading fontSize='5xl'>O mne.</Heading>
+        <Heading fontSize={{base:'5xl', md:'6xl', lg:'7xl'}}>O mne.</Heading>
         <Text fontSize='lg'>Čo som schopný o sebe prezradiť?</Text>
       </Stack>
 

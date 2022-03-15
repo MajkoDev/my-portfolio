@@ -1,12 +1,11 @@
 import { Stack, Heading } from "@chakra-ui/react";
 
-const SectionGithub = () => {
+const SectionSkills = () => {
     return (
         <Stack h='full' w='full'>
-            <Heading>Section with Github</Heading>
-            
+            <Heading>Section about my Skills</Heading>
         </Stack>
     );
 }
 
-export default SectionGithub;
+export default SectionSkills;

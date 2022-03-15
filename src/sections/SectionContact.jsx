@@ -1,10 +1,10 @@
-import { Text } from "@chakra-ui/react";
+import { Stack, Heading } from "@chakra-ui/react";
 
 const SectionContact = () => {
     return (
-        <div>
-            <Text>Section with Contact</Text>
-        </div>
+        <Stack h='full' w='full'>
+            <Heading>Section with Contact</Heading>
+        </Stack>
     );
 }
 

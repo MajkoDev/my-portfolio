@@ -14,7 +14,7 @@ const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return(
-        <HStack w='full' px='6' py='5'  align='center' justify='space-between'>
+        <HStack w='full' py='5'  align='center' justify='space-between'>
             <Heading size='md'>MajkoDev</Heading>
 
             <HStack spacing='5' display={{ base: "none", md: "flex" }}>

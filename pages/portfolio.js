@@ -1,4 +1,6 @@
 import { Stack, Heading, Text } from "@chakra-ui/react";
+
+// Sections
 import SectionGithub from "../src/sections/SectionGithub";
 import SectionProjects from "../src/sections/SectionProjects";
 
@@ -12,7 +14,6 @@ const Portfolio = () => {
         <Heading fontSize='4xl'>Portfolio a Projekty</Heading>
         <Text fontSize='lg'>Čo som naposledy vytvoril?</Text>
       </Stack>
-
 
       <SectionProjects />
       <SectionGithub />

@@ -24,7 +24,11 @@ const Header = () => {
         justifyContent='space-between'
         alignItems='center'
         py={3}>
-        <Heading size='md'>MajkoDev</Heading>
+        <NextLink href='/' passHref>
+        <Heading size='md' as={Link}>
+          MajkoDev
+          </Heading>
+          </NextLink>
 
         <HStack alignItems='center' spacing={2}>
           <HStack display={["nono", "none", "flex", "flex"]}>
