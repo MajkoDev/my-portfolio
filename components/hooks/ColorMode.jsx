@@ -1,4 +1,4 @@
-import { useColorMode, IconButton, useColorModeValue } from "@chakra-ui/react";
+import {useColorMode, IconButton} from '@chakra-ui/react'
 import { IoMenu, IoClose } from "react-icons/io5";
 
 const ColorMode = () => {
@@ -9,14 +9,14 @@ const ColorMode = () => {
 
   return (
     <IconButton
-      size='lg'
-      arial-label='toggle menu'
-      variant='ghost'
-      onClick={isOpen ? onClose : onOpen}
-      icon={isOpen ? <IoClose /> : <IoMenu />}
-      display={["flex", "flex", "none", "none"]}
-    />
-  );
+    size='lg'
+    arial-label='toggle menu'
+    variant='ghost'
+    onClick={isOpen ? onClose : onOpen}
+    icon={isOpen ? <IoClose /> : <IoMenu />}
+    display={["flex", "flex", "none", "none"]}
+  />
+  )
 };
 
 export default ColorMode;
