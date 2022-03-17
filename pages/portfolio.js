@@ -1,4 +1,4 @@
-import { Stack, Heading, Text } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 // Sections
 import SectionGithub from "../src/sections/SectionGithub";
