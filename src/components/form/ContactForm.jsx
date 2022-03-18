@@ -17,20 +17,32 @@ const ContactForm = () => {
           <FormLabel ml={4} htmlFor='name'>
             Meno
           </FormLabel>
-          <FormHelperText ml={4} mb={4} fontSize={{ base: "xs", md: "sm" }}>
-            Ako ťa mám osloviť, ak sa rozhodnem ti odpísať?
-          </FormHelperText>
-          <Input id='name' type='text' />
+          <Input
+            id='name'
+            type='text'
+            placeholder='Ako ťa mám osloviť, ak sa rozhodnem ti odpísať?'
+            _placeholder={{
+              fontSize: { base: "xs", md: "sm" },
+              opacity: 1,
+              color: "gray.500",
+            }}
+          />
         </FormControl>
 
         <FormControl isRequired pb={4}>
           <FormLabel ml={4} htmlFor='email'>
             Mail
           </FormLabel>
-          <Input id='name' type='email' />
-          <FormHelperText ml={4} fontSize={{ base: "xs", md: "sm" }}>
-            Cestovný poriadok pre správy: Ktorý smerom poslať odpoveď?
-          </FormHelperText>
+          <Input
+            id='name'
+            type='email'
+            placeholder='Cestovný poriadok pre správy: Ktorý smerom poslať odpoveď?'
+            _placeholder={{
+              fontSize: { base: "xs", md: "sm" },
+              opacity: 1,
+              color: "gray.500",
+            }}
+          />
         </FormControl>
 
         <FormControl isRequired pb={4}>
@@ -43,19 +55,20 @@ const ContactForm = () => {
             height='32'
             placeholder='Ťažko čítam, ľahké slová. Prosím v skrátenej forme.'
             _placeholder={{
-              fontSize: "sm",
+              fontSize: { base: "xs", md: "sm" },
               opacity: 1,
               color: "gray.500",
             }}></Textarea>
-          {/* <FormHelperText ml={4} fontSize={{base: 'xs', md: 'sm'}}  >Ťažko čítam, ľahké slová. Prosím v skrátenej forme.</FormHelperText> */}
+
         </FormControl>
         <Center>
           <Button
             type='submit'
             w={24}
             m={6}
+            bg='gray.200'
             boxShadow='md'
-            _hover={{ boxShadow: "lg" }}>
+            _hover={{ boxShadow: "lg", bg: "gray.300" }}>
             Poslať
           </Button>
         </Center>
