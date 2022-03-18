@@ -2,7 +2,6 @@ import {
   Button,
   Center,
   FormControl,
-  FormHelperText,
   FormLabel,
   Input,
   Stack,
@@ -47,7 +46,7 @@ const ContactForm = () => {
 
         <FormControl isRequired pb={4}>
           <FormLabel ml={4} htmlFor='message' fontSize='md'>
-            Posolstvo
+            Správa
           </FormLabel>
           <Textarea
             id='message'

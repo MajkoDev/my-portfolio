@@ -1,13 +1,8 @@
-import {
-  Container,
-  Flex,
-  Heading,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
+import SectionText from "../elements/SectionText";
 
 const SectionAbout = () => {
   const data = {
@@ -20,21 +15,9 @@ const SectionAbout = () => {
     <Stack h='full' w='full'>
       <SectionTitle title='o mne.' subtitle='Čo o sebe prezradím?' />
       <Flex direction='column' align={{ base: "center", md: "end" }}>
-
-        <Container w={{ base: "30em", md: "62em" }} p='6' mx='4'>
-          <Heading fontSize={{ base: "lg", md: "2xl" }} mb={3}>
-            {data.title}
-          </Heading>
-          <Text fontSize={{ base: "sm", md: "md" }}>{data.description}</Text>
-        </Container>
-
-        <Container w={{ base: "30em", md: "62em" }} p='6' mx='4'>
-          <Heading fontSize={{ base: "lg", md: "2xl" }} mb={3}>
-            {data.title}
-          </Heading>
-          <Text fontSize={{ base: "sm", md: "md" }}>{data.description}</Text>
-        </Container>
-
+        <SectionText title={data.title} description={data.description} />
+        <SectionText title={data.title} description={data.description} />
+        <SectionText title={data.title} description={data.description} />
       </Flex>
     </Stack>
   );
