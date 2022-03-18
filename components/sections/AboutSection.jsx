@@ -11,7 +11,6 @@ const AboutSection = () => {
   return (
     <Stack h='full' w='full'>
 
-
       <Stack
         mb={{ base: "4", md: "10" }}
         alignItems={{ base: "center", md: "start" }}>
