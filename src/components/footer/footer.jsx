@@ -1,16 +1,10 @@
 import NextLink from "next/link";
-import { Stack, VStack, Divider, Link, chakra, Text, StackDivider } from "@chakra-ui/react";
+import { Stack, VStack, Divider, Link, chakra, Text } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <VStack as='footer' pb={8} spacing={8} alignItems='flex-start'>
       <Divider />
-
-      <Stack spacing="4" minW="36" flex="1">
-        <Text fontSize="sm" fontWeight="semibold" color="subtle">
-              Product
-            </Text>
-        </Stack>
 
       <Stack
         justifyContent='space-between'
@@ -30,10 +24,6 @@ const Footer = () => {
             <Link>Kontakt</Link>
           </NextLink>
         </VStack>
-
-
-
-        
 
         <VStack alignItems='flex-start' >
           <NextLink href='/' passHref>
