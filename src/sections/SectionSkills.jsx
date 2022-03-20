@@ -35,21 +35,19 @@ const SectionSkills = () => {
           neustále sa k nim vraciam a využívam ich, keďže sú základom program.
           jazykov, s ktorými pracujem." />
 
+        <SectionText 
+          title="dizajnovanie." 
+          description="hneď ako som si vyskušal Sass, tak som ho zbožňoval.
+          návrhy projektov tvorím buď na papier alebo vo Figme, často v oboch zároveň.
+          pri dizajnovaní som využil Tailwind Css, Chakra Ui, Bootstrap 5. momentálne skúšam Material Ui.
+          pri malých projektoch v Reacte, väčšinou používam Styled-Components, alebo Css-in-JS.
+          mal by som začať využívať Storybook viacej." />
 
-
-        <Box>
-        <Container rounded='lg' boxShadow='xl' p='6' w={{base: 'sm', md: 'lg'}}>
-          <Heading fontSize={{ base: "md", md: "lg" }} mb={3}>
-            základy web vývoja.
-          </Heading>
-          <Text fontSize={{ base: "sm", md: "md" }} mb={3}>
-            poznám Html, Css, Javascript. ťažko si predstaviť pracovať bez nich.
-            neustále sa k nim vraciam a využívam ich, keďže sú základom program.
-            jazykov, s ktorými pracujem.
-          </Text>
-        </Container>
-        </Box>
-
+        <SectionText 
+          title="Front-End." 
+          description="venujem sa Reactu a jeho ekosystem
+          poznám základy, kontext, hooks, router
+          pracoval som s Next.js a aj Gatsby" />
         
 
 

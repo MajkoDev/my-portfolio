@@ -7,10 +7,8 @@ const SectionTitle = ({ title, description }) => {
         <Heading fontSize={{ base: "md", md: "lg" }} mb={3}>
           {title}
         </Heading>
-        <Text fontSize={{ base: "sm", md: "md" }} mb={3}>
-          poznám Html, Css, Javascript. ťažko si predstaviť pracovať bez nich.
-          neustále sa k nim vraciam a využívam ich, keďže sú základom program.
-          jazykov, s ktorými pracujem.
+        <Text fontSize={{ base: "sm", md: "md" }} fontWeight={300} mb={3}>
+          {description}
         </Text>
       </Container>
     </Box>
