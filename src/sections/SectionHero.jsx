@@ -3,22 +3,26 @@ import { Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
 const SectionHero = () => {
   return (
     <Stack
-      h='full'
+      h='78vh'
       w='full'
-      py={{ base: "12", md: "24" }}
+      px={4}
       direction={{ base: "column", md: "row" }}
-      alignItems='center'>
-      <Stack my='10' direction='column'>
-        <Text fontSize='4xl' mb='-5' pl={1}>
-          Volám sa,{" "}
+      alignItems='center'
+      justify='center'>
+      <Stack my='10' w='80%' direction='column'>
+        <Text fontSize={{ base: "2xl", md: "4xl" }} mb='-5'>
+          Volám sa,
         </Text>
-        <Heading fontSize='8xl'>Marian.</Heading>
-        <Text as='h3' pl={1}>
+        <Heading fontSize={{ base: "5xl", md: "7xl" }}>Marian.</Heading>
+        <Text fontSize={{ base: "sm", md: "lg" }} fontWeight={300}>
           <strong> front-end (samouk) developer </strong> zo západného
           Slovenska. <br /> nadšenec pre <strong>React</strong>, príležitostne
           sa venujem dizajnu.
         </Text>
-        <Link pl={1}>hellomariandev@gmail.com</Link>
+        ä
+        <Link fontSize={{ base: "sm", md: "lg" }} fontWeight={500}>
+          hellomariandev@gmail.com
+        </Link>
       </Stack>
       <Image
         src='https://bit.ly/dan-abramov'
