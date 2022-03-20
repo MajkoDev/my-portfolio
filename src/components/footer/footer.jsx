@@ -7,7 +7,7 @@ const Footer = () => {
       <Divider />
 
       <Stack
-        justifyContent='space-between'
+        justifyContent='center'
         w='full'
         direction={{ base: "column", md: "row" }}
         alignItems={{base: 'flex-start', md:'center'}}
@@ -40,6 +40,7 @@ const Footer = () => {
 
         <VStack alignItems='flex-start'></VStack>
       </Stack>
+      
 
       <Stack
         alignItems='center'
