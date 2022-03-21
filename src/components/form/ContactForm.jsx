@@ -35,9 +35,10 @@ const ContactForm = () => {
     form.current.reset();
   };
 
+
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <Stack w='full'>
+    <form ref={form} onSubmit={sendEmail}  >
+      <Stack w='full' >
         <FormControl isRequired pb={4}>
           <FormLabel ml={4} htmlFor='name'>
             Meno

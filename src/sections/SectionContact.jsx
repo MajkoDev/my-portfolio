@@ -1,4 +1,4 @@
-import { Box, Stack, Center } from "@chakra-ui/react";
+import { Box, Stack, Center, Button } from "@chakra-ui/react";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
@@ -12,6 +12,11 @@ const SectionContact = () => {
         <Box p={3} mx={12} w='full' boxShadow='xl' rounded='xl'>
           <ContactForm />
         </Box>
+      </Center>
+      <Center>
+        <Button size='lg' w='32'>
+          Hello
+        </Button>
       </Center>
     </Stack>
   );

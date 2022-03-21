@@ -1,4 +1,4 @@
-import { Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
