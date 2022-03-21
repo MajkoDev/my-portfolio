@@ -13,7 +13,7 @@ const ContactForm = () => {
     <form action='submit'>
       <Stack w='full'>
         <FormControl isRequired pb={4}>
-          <FormLabel ml={4} htmlFor='name'>
+          <FormLabel ml={4} htmlFor='name' >
             Meno
           </FormLabel>
           <Input

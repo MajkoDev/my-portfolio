@@ -1,9 +1,10 @@
 import NextLink from "next/link";
-import { Stack, VStack, Divider, Link, chakra, Text, StackDivider } from "@chakra-ui/react";
+import { Stack, VStack, Divider, Link, chakra, Text, StackDivider, Flex } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <VStack as='footer' pb={8} spacing={8} alignItems='flex-start'>
+    <Stack as='footer' pb='8' spacing='8'>
+      
       <Divider />
 
       <Stack spacing="4" minW="36" flex="1">
@@ -63,7 +64,7 @@ const Footer = () => {
           Marian Dev
         </Text>
       </Stack>
-    </VStack>
+    </Stack>
   );
 };
 
