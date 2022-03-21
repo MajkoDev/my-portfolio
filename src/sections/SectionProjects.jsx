@@ -15,9 +15,9 @@ const SectionProjects = () => {
 
       <VStack>
       {/* <Box w='300px' h='100px' bg='red.100' /> */}
-
+{/* 
       <CardProject />
-      <CardProject />
+      <CardProject /> */}
 
 
       {/* <CardProject />
