@@ -6,54 +6,52 @@ const config = {
   useSystemColorMode: false,
 };
 
+const breakpoints = {
+  sm: "30em",
+  md: "48em",
+  lg: "62em",
+  xl: "80em",
+  "2xl": "96em",
+};
+
 const theme = extendTheme({
+  // customize colors
+  colors: {
+    blue: {
+      50: "#e5f1ff",
+      100: "#bdd6f4",
+      200: "#93baea",
+      300: "#6a9fe2",
+      400: "#4384da",
+      500: "#2c6ac1",
+      600: "#215397",
+      700: "#173b6c",
+      800: "#0b2342",
+      900: "#010c1a",
+    },
+    red: {
+      50: "#ffe5ed",
+      100: "#fabbc9",
+      200: "#f08fa4",
+      300: "#e86380",
+      400: "#e1385c",
+      500: "#c71e42",
+      600: "#9c1634",
+      700: "#710e24",
+      800: "#450515",
+      900: "#1e0006",
+    },
+  },
+
   styles: {
     global: (props) => ({
+      // dark and light theme
       body: {
-        fontFamily: "body",
-        color: mode("blue.900", "whiteAlpha.600")(props),
-        bg: mode("white", "blue.900")(props),
+        color: mode("blue.800", "gray.50")(props),
+        bg: mode("gray.50", "blue.800")(props),
         lineHeight: "base",
       },
     }),
-  },
-
-  textStyles: {
-    h1: {
-      // you can also use responsive styles
-      fontSize: ["48px", "72px"],
-      fontWeight: "bold",
-      lineHeight: "110%",
-      letterSpacing: "-2%",
-    },
-    h2: {
-      fontSize: ["36px", "48px"],
-      fontWeight: "semibold",
-      lineHeight: "110%",
-      letterSpacing: "-1%",
-    },
-  },
-
-  components: {
-    Input: {
-      variants: {
-        md: {
-          field: {
-            borderRadius: "none",
-          },
-        },
-      },
-    },
-
-    Box: {
-      variants: {
-        primary: (props) => ({
-          boxShadow: "xl",
-          rounded: "xl",
-          backgroundColor: mode("brand.500", "brand.200")(props),
-        }),
-      },
-    },
   },
 });
 

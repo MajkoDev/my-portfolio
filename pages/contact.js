@@ -7,6 +7,7 @@ const Contact = () => {
   return (
     <Stack h='full' w='full'>
       <SectionContact />
+
     </Stack>
   );
 };
