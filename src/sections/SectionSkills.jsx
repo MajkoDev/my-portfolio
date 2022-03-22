@@ -3,20 +3,9 @@ import { Stack, Flex } from "@chakra-ui/react";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
 import SectionText from "../elements/SectionText";
+import CardSkill from "../cards/CardSkill";
 
 const SectionSkills = () => {
-  const skills = [
-    {
-      title: "kto som?",
-      description:
-        "poznám html, css, javascript stále viac a viac sa učím javascript, keďže ho využívam na aplikácie a projekty",
-    },
-    {
-      title: "dizajnovanie",
-      description:
-        "poznám html, css, javascript stále viac a viac sa učím javascript, keďže ho využívam na aplikácie a projekty",
-    },
-  ];
 
   return (
     <Stack h='full' w='full'>
@@ -27,7 +16,7 @@ const SectionSkills = () => {
 
       <Flex direction='column' align={{ base: "center", md: "end" }}>
         {/* <SectionText title={skills.title} description={skills.description} /> */}
-
+{/* 
         <SectionText
           title='základy web vývoja.'
           description='poznám Html, Css, Javascript. ťažko si predstaviť pracovať bez nich.
@@ -50,6 +39,11 @@ const SectionSkills = () => {
           poznám základy, kontext, hooks, router
           pracoval som s Next.js a aj Gatsby'
         />
+
+        <CardSkill 
+        title='Title'
+        description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/> */}
+
       </Flex>
     </Stack>
   );

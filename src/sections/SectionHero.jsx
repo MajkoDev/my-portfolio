@@ -1,5 +1,6 @@
 import { Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
 
+
 const SectionHero = () => {
   return (
     <Stack
