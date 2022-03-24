@@ -12,7 +12,6 @@ import NextLink from "next/link";
 import { FiCodesandbox, FiGithub } from "react-icons/fi";
 
 
-
 const CardGithub = () => {
 
   const colorTitle = useColorModeValue("gray.700", "gray.200");

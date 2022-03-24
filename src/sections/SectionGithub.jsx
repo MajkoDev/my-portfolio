@@ -8,13 +8,24 @@ import SectionTitle from "../elements/SectionTitle";
 import GithubLink from "../elements/GithubLink";
 
 // Apollo Client
-import { ApolloClient, InMemoryCache, createHttpLink, gql } from "@apollo/client";
-import { setContext } from '@apollo/client/link/context';
+import {
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+  gql,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
+const SectionGithub = ({ pinnedItems }) => {
+  console.log(pinnedItems);
 
-const SectionGithub = ({pinnedItems}) => {
-
-  console.log(pinnedItems)
+  const listRepositories =
+    pinnedItems &&
+    pinnedItems.map((item) => (
+      <Link key={item.id} src={item.url}>
+        <Text>{item.name}</Text>
+      </Link>
+    ));
 
   return (
     <Stack h='full' w='full'>
@@ -24,12 +35,14 @@ const SectionGithub = ({pinnedItems}) => {
       />
 
       <Container m={5}>
-        {pinnedItems.map(item => {
-          <Link key={item.id} src={item.url}>
-            <Text>{ item.name }</Text>
-          </Link>
-        })}
+        {pinnedItems &&
+          pinnedItems.data.map((item) => {
+            <Link key={item.id} src={item.url}>
+              <Text>{item.name}</Text>
+            </Link>;
+          })}
       </Container>
+
 
 
       <Wrap spacing='20px' justify='center'>
@@ -49,23 +62,23 @@ const SectionGithub = ({pinnedItems}) => {
 
 export default SectionGithub;
 
-export async function getStaticProps(){
+export async function getStaticProps() {
   const httpLink = createHttpLink({
-    uri: 'https://api.github.com/graphql',
+    uri: "https://api.github.com/graphql",
   });
-  
+
   const authLink = setContext((_, { headers }) => {
     return {
       headers: {
         ...headers,
         authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
-      }
-    }
+      },
+    };
   });
-  
+
   const client = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
   });
 
   const { data } = await client.query({
@@ -89,17 +102,16 @@ export async function getStaticProps(){
           }
         }
       }
-    `
+    `,
   });
 
-  const {user} = data;
+  const { user } = data;
 
-  const pinnedItems = user.pinnedItems.edges.map(edge => edge.node);
+  const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node);
 
- 
-  return{
+  return {
     props: {
-      pinnedItems
-    }
-  }
+      pinnedItems,
+    },
+  };
 }
