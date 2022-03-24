@@ -1,21 +1,37 @@
-import { Center, Heading, Stack, Wrap, Link, HStack } from "@chakra-ui/react";
-
-import NextLink from "next/link";
-import { ImGithub } from "react-icons/im";
+import { Center, Container, Link, Stack, Text, Wrap } from "@chakra-ui/react";
 
 // Components
 import CardGithub from "../components/cards/CardGithub";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
+import GithubLink from "../elements/GithubLink";
 
-const SectionGithub = () => {
+// Apollo Client
+import { ApolloClient, InMemoryCache, createHttpLink, gql } from "@apollo/client";
+import { setContext } from '@apollo/client/link/context';
+
+
+const SectionGithub = ({pinnedItems}) => {
+
+  console.log(pinnedItems)
+
   return (
     <Stack h='full' w='full'>
       <SectionTitle
         title='github.'
         subtitle='Posledné projekty a repozitoriá.'
       />
+
+      <Container m={5}>
+        {pinnedItems.map(item => {
+          <Link key={item.id} src={item.url}>
+            <Text>{ item.name }</Text>
+          </Link>
+        })}
+      </Container>
+
+
       <Wrap spacing='20px' justify='center'>
         <CardGithub />
         <CardGithub />
@@ -25,19 +41,65 @@ const SectionGithub = () => {
       </Wrap>
 
       <Center>
-        <NextLink href='/' passHref>
-          <Link fontWeight='600' mt='6' fontSize='xs'>
-            <HStack>
-              <ImGithub size='22' />
-              <Heading fontSize={{ base: "lg", md: "2xl" }} m='5'>
-                GitHub
-              </Heading>
-            </HStack>
-          </Link>
-        </NextLink>
+        <GithubLink />
       </Center>
     </Stack>
   );
 };
 
 export default SectionGithub;
+
+export async function getStaticProps(){
+  const httpLink = createHttpLink({
+    uri: 'https://api.github.com/graphql',
+  });
+  
+  const authLink = setContext((_, { headers }) => {
+    return {
+      headers: {
+        ...headers,
+        authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+      }
+    }
+  });
+  
+  const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache()
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      {
+        user(login: "colbyfayock") {
+          pinnedItems(first: 6) {
+            totalCount
+            edges {
+              node {
+                ... on Repository {
+                  name
+                  id
+                  url
+                  stargazers {
+                    totalCount
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  });
+
+  const {user} = data;
+
+  const pinnedItems = user.pinnedItems.edges.map(edge => edge.node);
+
+ 
+  return{
+    props: {
+      pinnedItems
+    }
+  }
+}

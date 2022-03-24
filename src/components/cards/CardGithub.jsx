@@ -6,18 +6,23 @@ import {
   Flex,
   Spacer,
   HStack,
-  WrapItem,
+  WrapItem, useColorModeValue
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FiCodesandbox, FiGithub } from "react-icons/fi";
 
+
+
 const CardGithub = () => {
+
+  const colorTitle = useColorModeValue("gray.700", "gray.200");
+
   return (
     <WrapItem>
       <Container
         border='1px'
         borderColor='gray.500'
-        color='gray.700'
+        color={colorTitle}
         rounded='md'
         p='3'
         maxW='320px'>
@@ -26,7 +31,7 @@ const CardGithub = () => {
           <Spacer />
 
           <NextLink href='/' passHref>
-            <Link fontWeight='600' fontSize='xs'>
+            <Link fontWeight='600' fontSize='xs' >
               <HStack>
                 <FiCodesandbox m='2' />
                 <Text>CodeSandBox</Text>
