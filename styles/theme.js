@@ -18,7 +18,7 @@ const theme = extendTheme({
   // customize colors
   colors: {
     blue: {
-      50: "#e5f1ff",
+      50: "#99c8ff",
       100: "#bdd6f4",
       200: "#93baea",
       300: "#6a9fe2",
@@ -41,6 +41,9 @@ const theme = extendTheme({
       800: "#450515",
       900: "#1e0006",
     },
+    linear:{
+      1: "linear-gradient(90deg, #E70B9C -20.91%, #2C16B5 122.73%)"
+    }
   },
 
   styles: {

@@ -15,6 +15,8 @@ const SectionSkills = () => {
       />
 
       <Flex direction='column' align={{ base: "center", md: "end" }}>
+        
+        
         {/* <SectionText title={skills.title} description={skills.description} /> */}
 {/* 
         <SectionText

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Container
         d="flex"
-        maxW="container.md"
+        maxW="container.lg"
         minH={{ base: "auto", md: "100vh" }}
         px={{ base: 4, lg: 0 }}
         centerContent
