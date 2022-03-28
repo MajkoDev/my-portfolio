@@ -4,7 +4,7 @@ import { Stack, Flex } from "@chakra-ui/react";
 import SectionTitle from "../elements/SectionTitle";
 import SectionText from "../elements/SectionText";
 import CardSkill from "../cards/CardSkill";
-
+import SkillDescription from "../elements/SkilDescription"
 const SectionSkills = () => {
 
   return (
@@ -14,11 +14,15 @@ const SectionSkills = () => {
         subtitle='Technologie, jazyky, nástroje, '
       />
 
+<SkillDescription />
+
+
       <Flex direction='column' align={{ base: "center", md: "end" }}>
         
         
         {/* <SectionText title={skills.title} description={skills.description} /> */}
-{/* 
+
+
         <SectionText
           title='základy web vývoja.'
           description='poznám Html, Css, Javascript. ťažko si predstaviť pracovať bez nich.
@@ -44,7 +48,7 @@ const SectionSkills = () => {
 
         <CardSkill 
         title='Title'
-        description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/> */}
+        description='Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'/> 
 
       </Flex>
     </Stack>

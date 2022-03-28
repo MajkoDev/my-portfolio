@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         d="flex"
         maxW="container.lg"
         minH={{ base: "auto", md: "100vh" }}
-        px={{ base: 4, lg: 0 }}
+        px={{ base: 2, sm: 6 }}
         centerContent
       >
       <Header />

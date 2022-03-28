@@ -10,6 +10,7 @@ const SectionAbout = () => {
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aliquam animi quibusdam odio amet deleniti quisquam molestiae corrupti quaerat nulla ab nostrum, nisi id consequuntur velit cumque atque reiciendis, rem, possimus doloremque ipsa! Nemo obcaecati harum possimus consequuntur voluptatibus repudiandae at vitae porro cupiditate beatae.",
   };
+  
 
   return (
     <Stack h='full' w='full'>
