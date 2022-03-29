@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
+
 const SelectTitle = styled(Heading)`
   background: linear-gradient(90deg, #e70b9c -20.91%, #2c16b5 122.73%);
   -webkit-background-clip: text;
@@ -47,8 +48,7 @@ const SkillNumber = styled(Heading)`
 const About = () => {
   return (
     <Stack h='full' w='full'>
-      {/* About Me Section Title */}
-      <Stack align={{ base: "end", md: "start" }} mt='4'>
+       <Stack align={{ base: "end", md: "start" }} mt='4'>
         <Heading fontSize={{ base: "xl", md: "5xl" }}>
           <SelectTitle>O mne.</SelectTitle>{" "}
         </Heading>
@@ -128,6 +128,10 @@ const About = () => {
 
       {/* Section About Me */}
 
+
+
+      
+
       {/* Title for Skill Section */}
       <Stack py='10'>
         <Flex direction={{ base: "column", md: "row" }} align='end'>
@@ -143,6 +147,13 @@ const About = () => {
 
         <Divider />
       </Stack>
+
+
+
+
+
+
+
 
       {/* Container for Skill Section */}
 

@@ -1,6 +1,6 @@
 import { Box, Container, Stack, VStack, Wrap } from "@chakra-ui/react";
 import CardExample from "../components/cards/CardExample";
-import CardProject from "../components/cards/CardProject";
+import ProjectCard from "../components/cards/ProjectCard";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
@@ -16,13 +16,13 @@ const SectionProjects = () => {
       <VStack>
       {/* <Box w='300px' h='100px' bg='red.100' /> */}
 {/* 
-      <CardProject />
-      <CardProject /> */}
+      <ProjectCard />
+      <ProjectCard /> */}
 
 
-      {/* <CardProject />
-      <CardProject />
-        <CardProject /> */}
+      {/* <ProjectCard />
+      <ProjectCard />
+        <ProjectCard /> */}
       </VStack>
     </Stack>
   );
