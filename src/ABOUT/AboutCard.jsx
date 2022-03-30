@@ -7,7 +7,7 @@ const AboutCard = ({ title, description }) => {
     <Box>
       <Container maxW='container.md' mb='6'>
         <AboutSubtitle title={title} />
-        <Text color='gray.700' fontWeight={500}  fontSize={{ base: "md", md: "lg" }}>
+        <Text color='gray.700' fontWeight={400}  fontSize={{ base: "md", md: "lg" }}>
           {description}
         </Text>
       </Container>

@@ -1,21 +1,21 @@
-import { Heading, Stack } from "@chakra-ui/react";
+import { Text, Stack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
-const Subtitle = styled(Heading)`
+const Subtitle = styled(Text)`
   background: linear-gradient(276.62deg, #e72e0b -20%, #2c16b5 120.8%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
   font-weight: 800;
-`;
+ `;
 
 const AboutSubtitle = ({ title }) => {
   return (
     <Stack align='start' mz='4'>
-      <Heading fontSize={{ base: "lg", md: "2xl" }}>
+      <Text fontSize={{ base: "xl", md: "3xl" }} >
         <Subtitle>{title}</Subtitle>
-      </Heading>
+      </Text>
     </Stack>
   );
 };
