@@ -13,7 +13,7 @@ const Subtitle = styled(Text)`
 const AboutSubtitle = ({ title }) => {
   return (
     <Stack align='start' mz='4'>
-      <Text fontSize={{ base: "xl", md: "3xl" }} >
+      <Text fontSize={{ base: "xl", md: "2xl" }} >
         <Subtitle>{title}</Subtitle>
       </Text>
     </Stack>
