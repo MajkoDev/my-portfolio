@@ -115,7 +115,7 @@ const ContactForm = () => {
             type='submit'
             w={24}
             m={6}
-            color='blue.50'
+            color='white'
             bg='blue.700'
             boxShadow='md'
             _hover={{ boxShadow: "lg", bg: "gray.300" }}>

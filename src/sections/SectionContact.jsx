@@ -16,7 +16,7 @@ const SectionContact = () => {
     <Stack h='full' w='full'>
       <SectionTitle title='kontakt.' subtitle='ako sa spojiť bez facebooku?' />
       <Center>
-        <Box p={3} mx={12} bg={bg} w='full' boxShadow='xl' rounded='xl'>
+        <Box p={3} mx={2} bg={bg} w='2xl' boxShadow='xl' rounded='xl'>
           <ContactForm />
         </Box>
       </Center>
