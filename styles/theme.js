@@ -15,6 +15,11 @@ const breakpoints = {
 };
 
 const theme = extendTheme({
+  // fonts
+  fonts: {
+    heading: 'Open Sans, sans-serif',
+    body: 'Poppins, sans-serif',
+  },
   // customize colors
   colors: {
     blue: {
