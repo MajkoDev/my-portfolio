@@ -18,7 +18,7 @@ const theme = extendTheme({
   // fonts
   fonts: {
     heading: 'Open Sans, sans-serif',
-    body: 'Poppins, sans-serif',
+    body: 'Open Sans, sans-serif',
   },
   // customize colors
   colors: {

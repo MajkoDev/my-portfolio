@@ -7,7 +7,7 @@ const SelectTitle = styled(Heading)`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  font-weight: 800;
+  font-weight: 900;
 `;
 
 const SectionTitle = ({ title, subtitle }) => {
