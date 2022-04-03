@@ -22,7 +22,7 @@ const Footer2 = () => {
 
       <Stack w='full' direction={{ base: "column", md: "row" }}>
         {/* lets contact */}
-        <VStack alignItems='flex-start' >
+        <VStack alignItems='flex-start'>
           <NextLink href='/contact' passHref>
             <Link>
               <Heading size='2xl'>Poslať správu</Heading>
@@ -33,22 +33,32 @@ const Footer2 = () => {
         <Spacer />
 
         {/* icons */}
-        <Flex alignItems='end'>
-          <Box>
-           
-           
+        <HStack alignItems='end'>
+          <Spacer />
+          {/* <Box>
             <NextLink href='/' passHref>
               <Link textStyle='h3' _hover={{ color: "teal.300" }}>
                 Github
               </Link>
             </NextLink>
+          </Box> */}
 
-          </Box>
 
-          <Button colorScheme='blue' rounded='50px' p='1'>
-            L
-          </Button>
-        </Flex>
+        <HStack alignItems='flex-start'>
+          <NextLink href='/' passHref>
+            <Link textStyle='h3' _hover={{ color: "teal.300" }}>
+              Github
+            </Link>
+          </NextLink>
+          <NextLink href='/' passHref>
+            <Link textStyle='h3' _hover={{ color: "teal.300" }}>
+              Letterboxd
+            </Link>
+          </NextLink>
+        </HStack>
+
+          {/* <Button colorScheme='blue' rounded='50px' p='1'>L</Button> */}
+        </HStack>
       </Stack>
 
       {/* list */}
@@ -76,7 +86,7 @@ const Footer2 = () => {
           </NextLink>
         </VStack>
 
-        <VStack alignItems='flex-start'>
+        <HStack alignItems='flex-start'>
           <NextLink href='/' passHref>
             <Link textStyle='h3' _hover={{ color: "teal.300" }}>
               Github
@@ -87,7 +97,7 @@ const Footer2 = () => {
               Letterboxd
             </Link>
           </NextLink>
-        </VStack>
+        </HStack>
 
         <VStack alignItems='flex-start'></VStack>
       </Stack>
