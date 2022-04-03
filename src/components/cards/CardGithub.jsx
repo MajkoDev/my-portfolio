@@ -1,9 +1,9 @@
 import {
-  Container,
   Heading,
   Link,
   Text,
   Button,
+  Stack,
   Flex,
   Box,
   Spacer,
@@ -13,8 +13,9 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FiCodesandbox, FiGithub } from "react-icons/fi";
+import { ImGithub } from "react-icons/im";
 
-const CardGithub = () => {
+const CardGithub = (item) => {
   const colorTitle = useColorModeValue("gray.800", "gray.200");
 
   return (
@@ -25,45 +26,51 @@ const CardGithub = () => {
         color={colorTitle}
         rounded='md'
         p='3'
-        minW='280px'
-        maxW='340px'>
-        <Flex justify='center' align='center' mb='2' mr='2'>
-          <Heading size='sm'>Note Taking App</Heading>
-          <Spacer />
+        minH='100px'
+        maxW='360px'>
+        <Stack w='300px' mx='4' alignContent='stretch'>
+          <Flex justify='center' align='center' mb='2' mr='2'>
+            <NextLink href={item.url} passHref>
+              <a target='_blank' rel='noreferrer'>
+                <Heading size='sm'>{item.name}</Heading>
+              </a>
+            </NextLink>
 
-          <NextLink href='/' passHref>
-            <Link fontWeight='600' fontSize='xs'>
-              <HStack>
-                <FiCodesandbox m='2' />
-                <Text>CodeSandBox</Text>
-              </HStack>
-            </Link>
-          </NextLink>
-        </Flex>
+            <Spacer />
 
-        <Text fontSize='xs' mb='5'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa amet
-          voluptatem libero.
-        </Text>
-
-        <HStack mr='2'>
-          <Text fontSize='xs' fontWeight='semibold'>
-            React Tailwind Firebase
-          </Text>
-          <Spacer />
-
-          <Button
-            variant='ghost'
-            borderRadius='60px'
-            size='sm'
-            borderColor='gray.600'>
             <NextLink href='/' passHref>
-              <Link fontWeight='600' fontSize='md'>
-                <FiGithub />{" "}
+              <Link fontWeight='600' fontSize='xs'>
+                <HStack>
+                  <FiCodesandbox m='2' />
+                  <Text>CodeSandBox</Text>
+                </HStack>
               </Link>
             </NextLink>
-          </Button>
-        </HStack>
+          </Flex>
+
+          <Text fontSize='xs' mb='5'>
+            {item.description}
+          </Text>
+
+          <HStack mr='2'>
+            <Text fontSize='xs' fontWeight='semibold'>
+              React Tailwind Firebase
+            </Text>
+            <Spacer />
+
+            <NextLink href={item.url} passHref>
+              <a target='_blank' rel='noreferrer'>
+                <Button
+                  variant='ghost'
+                  borderRadius='60px'
+                  size='sm'
+                  borderColor='gray.600'>
+                  <ImGithub />{" "}
+                </Button>
+              </a>
+            </NextLink>
+          </HStack>
+        </Stack>
       </Box>
     </WrapItem>
   );

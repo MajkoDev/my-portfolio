@@ -1,4 +1,4 @@
-import { Stack } from "@chakra-ui/react";
+import { Container, Heading, Stack, Text } from "@chakra-ui/react";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
@@ -16,8 +16,14 @@ const SectionSkills = () => {
 
       {/* LAYOUT */}
       
+      <Heading fontSize='xl'>Technologies</Heading>
+      <Text fontSize='md'>Visual Studio Code</Text>
+      <Text fontSize='md'>Figma</Text>
 
 
+      <Container>
+        <Heading fontSize='lg'>základy web vývoja.</Heading>
+      </Container>
 
 
 

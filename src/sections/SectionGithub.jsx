@@ -1,12 +1,4 @@
-import {
-  Center,
-  Container,
-  Box,
-  Link,
-  Stack,
-  Text,
-  Wrap,
-} from "@chakra-ui/react";
+import { Center, Stack, Wrap } from "@chakra-ui/react";
 
 // Components
 import CardGithub from "../components/cards/CardGithub";
@@ -15,28 +7,25 @@ import CardGithub from "../components/cards/CardGithub";
 import SectionTitle from "../elements/SectionTitle";
 import GithubLink from "../elements/GithubLink";
 
-const SectionGithub = () => {
+export default function SectionGithub({ pinnedItems }) {
   return (
     <Stack h='full' w='full'>
       <SectionTitle
         title='github.'
         subtitle='Posledné projekty a repozitoriá.'
       />
-      <Stack pl={{base: '0', lg: '100px'}}>
 
-      <Wrap spacing='20px' justify='center'>
-        <CardGithub />
-        <CardGithub />
-        <CardGithub />
-        <CardGithub />
-      </Wrap>
+      <Stack pl={{ base: "0", lg: "100px" }}>
+        <Wrap spacing='20px' justify='center'>
+          {pinnedItems.map((item) => {
+            return <CardGithub key={item.id} {...item} />;
+          })}
+        </Wrap>
 
-      <Center>
-        <GithubLink />
-      </Center>
+        <Center>
+          <GithubLink />
+        </Center>
       </Stack>
     </Stack>
   );
-};
-
-export default SectionGithub;
+}
