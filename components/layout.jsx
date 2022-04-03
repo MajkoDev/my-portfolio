@@ -1,5 +1,6 @@
 import { Container, VStack } from "@chakra-ui/react";
 import Footer from "./footer";
+import Footer2 from "./footer2"
 import Header from "./navbar/Header";
 
 const Layout = ({ children }) => {
@@ -17,7 +18,7 @@ const Layout = ({ children }) => {
           <VStack as="main" flex={1} w="full" spacing={16}>
             {children}
           </VStack>
-          <Footer />
+          <Footer2 />
         </VStack>
       </Container>
     </>

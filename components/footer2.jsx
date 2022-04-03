@@ -4,20 +4,54 @@ import {
   VStack,
   Divider,
   Link,
+  Box,
   chakra,
   Text,
-  Container
+  Button,
+  HStack,
+  Heading,
+  Container,
+  Spacer,
 } from "@chakra-ui/react";
+import { PhoneIcon } from "@chakra-ui/react";
 
-const Footer = () => {
+const Footer2 = () => {
   return (
-    <Stack as='footer' pb='8' spacing='8' >
+    <Stack as='footer' pb='8' spacing='8'>
       <Divider />
 
-      <Stack w='full'>
-      <Text bg='blue.300'>        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis unde assumenda modi consectetur vel sed saepe nesciunt aliquid, necessitatibus tenetur sunt. Atque debitis nihil odio dolore aliquam magnam maxime dolor sunt distinctio fugit voluptas porro fugiat ab nesciunt autem praesentium corporis dolores sapiente quo, vel quisquam quam! Autem, necessitatibus blanditiis. Exercitationem consectetur molestiae fugit!
-</Text>
+      <Stack w='full' direction={{ base: "column", md: "row" }}>
+        {/* lets contact */}
+        <VStack alignItems='flex-start' >
+          <NextLink href='/contact' passHref>
+            <Link>
+              <Heading size='2xl'>Poslať správu</Heading>
+            </Link>
+          </NextLink>
+          <Text>Ako poslať správu?</Text>
+        </VStack>
+        <Spacer />
+
+        {/* icons */}
+        <Flex alignItems='end'>
+          <Box>
+           
+           
+            <NextLink href='/' passHref>
+              <Link textStyle='h3' _hover={{ color: "teal.300" }}>
+                Github
+              </Link>
+            </NextLink>
+
+          </Box>
+
+          <Button colorScheme='blue' rounded='50px' p='1'>
+            L
+          </Button>
+        </Flex>
       </Stack>
+
+      {/* list */}
 
       <Stack spacing='4' minW='36' flex='1'>
         <Text fontSize='sm' fontWeight='semibold' color='subtle'>
@@ -74,4 +108,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer2;

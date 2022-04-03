@@ -7,7 +7,6 @@ import SectionText from "../elements/SectionText";
 const SectionSkills = () => {
   return (
     <Stack h='full' w='full'>
-
       {/* TITLE */}
       <SectionTitle
         title='Schopnosti.'
@@ -15,18 +14,14 @@ const SectionSkills = () => {
       />
 
       {/* LAYOUT */}
-      
+
       <Heading fontSize='xl'>Technologies</Heading>
       <Text fontSize='md'>Visual Studio Code</Text>
       <Text fontSize='md'>Figma</Text>
 
-
       <Container>
         <Heading fontSize='lg'>základy web vývoja.</Heading>
       </Container>
-
-
-
 
       {/* CARDS: 1-4 */}
       <SectionText
