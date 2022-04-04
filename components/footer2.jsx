@@ -46,12 +46,12 @@ const Footer2 = () => {
 
         <HStack alignItems='flex-start'>
           <NextLink href='/' passHref>
-            <Link textStyle='h3' _hover={{ color: "teal.300" }}>
+            <Link textStyle='h3' fontWeight='semibold' _hover={{ color: "#e02251" }}>
               Github
             </Link>
           </NextLink>
           <NextLink href='/' passHref>
-            <Link textStyle='h3' _hover={{ color: "teal.300" }}>
+            <Link textStyle='h3' fontWeight='semibold' _hover={{ color: "#e02251" }}>
               Letterboxd
             </Link>
           </NextLink>

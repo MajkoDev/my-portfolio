@@ -1,5 +1,15 @@
-import { Heading, Image, Link, Stack, Text } from "@chakra-ui/react";
-
+import {
+  Heading,
+  Image,
+  Link,
+  Box,
+  AspectRatio,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import avatar from "../../public/images/avatar.gif";
+import Mac from "../../public/images/mac.jpg";
+import NextImage from "next/image";
 
 const SectionHero = () => {
   return (
@@ -10,7 +20,8 @@ const SectionHero = () => {
       direction={{ base: "column", md: "row" }}
       alignItems='center'
       justify='center'>
-      <Stack my='10' w='80%' direction='column'>
+
+      <Stack my='10' w='70%' direction='column'>
         <Text fontSize={{ base: "2xl", md: "4xl" }} mb='-5'>
           Volám sa,
         </Text>
@@ -20,17 +31,39 @@ const SectionHero = () => {
           Slovenska. <br /> nadšenec pre <strong>React</strong>, príležitostne
           sa venujem dizajnu.
         </Text>
-        ä
+
         <Link fontSize={{ base: "sm", md: "lg" }} fontWeight={500}>
           hellomariandev@gmail.com
         </Link>
       </Stack>
+
+      {/* 
       <Image
         src='https://bit.ly/dan-abramov'
         boxSize='250px'
         borderRadius='full'
         alt='Profile'
-      />
+      />{" "} */}
+
+        {/* 
+            40 44 48 56 60 64 72 80 96
+
+            e02251 0d1068
+        */}
+
+      <AspectRatio as='figure' flexShrink={0} w={{base: 60, md: 80}} h={{base: 60, md: 80}} ratio={1}>
+        
+        <Box overflow='hidden' rounded='full'>
+          <NextImage
+            src={avatar}
+            alt='Picture of the author'
+            width={900}
+            height={900}
+          />
+        </Box>
+      </AspectRatio>
+
+
     </Stack>
   );
 };
