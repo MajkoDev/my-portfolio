@@ -10,9 +10,9 @@ const Subtitle = styled(Text)`
   font-weight: 800;
  `;
 
-const AboutSubtitle = ({ title }) => {
+const AboutSubtitle = ({ title, titleAlignment }) => {
   return (
-    <Stack align='start' mz='4'>
+    <Stack align={titleAlignment} mz='4'>
       <Text fontSize={{ base: "xl", md: "2xl" }} >
         <Subtitle>{title}</Subtitle>
       </Text>

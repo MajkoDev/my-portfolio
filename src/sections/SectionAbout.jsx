@@ -7,6 +7,7 @@ import AboutCardSec from "../ABOUT/AboutCardSec";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
 
+
 const SectionAbout = () => {
   return (
     <Stack h='full' w='full'>
@@ -28,9 +29,12 @@ const SectionAbout = () => {
           <Flex direction={{ base: "column", md: "row" }}>
             <AboutCard
               title='Plány'
+              alignment='right'
+              titleAlignment='end'
               description='Prejsť z hobby do kariéry. Chcel by som sa zapojiť do skutočných projektov, aby som nabral skúsenosti z reálneho sveta. Nájsť miesto, kde by som bol užitočný a zároveň sa naučim nové veci.' />
             <AboutCard
               title='Historia'
+              alignment='left'
               description='Jedného dňa som sa rozhodol vyskúšať programovať. Spravil som niekoľko chýb, respektíve som nevynechal žiadnu z nich. Našťastie sa mi podarilo väčšinu prekonať, so zvyšnými ešte zápasím. Naučil som sa základy web vývoja a bez rozvahy skočil na front-end. Vybral som si React, prišiel mi zábavnejší ako Angular a populárnejší ako Vue.' />
           </Flex>
 
