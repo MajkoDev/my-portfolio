@@ -1,7 +1,7 @@
 import {
   Heading,
   Image,
-  Link,
+  Link, Flex,
   Box,
   AspectRatio,
   Stack,
@@ -13,16 +13,16 @@ import NextImage from "next/image";
 
 const SectionHero = () => {
   return (
-    <Stack
+    <Flex
       h='78vh'
       w='full'
       px={4}
-      direction={{ base: "column", md: "row" }}
+      flexDirection={{ base: " column", md: "row" }}
       alignItems='center'
-      justify='center'>
+      justifyContent='center'>
 
-      <Stack my='10' w='70%' direction='column'>
-        <Text fontSize={{ base: "2xl", md: "4xl" }} mb='-5'>
+      <Stack my='10'  direction='column'>
+        <Text fontSize={{ base: "2xl", md: "4xl" }} mb='-5' w='100%'>
           Volám sa,
         </Text>
         <Heading fontSize={{ base: "5xl", md: "7xl" }}>Marian.</Heading>
@@ -51,7 +51,7 @@ const SectionHero = () => {
             e02251 0d1068
         */}
 
-      <AspectRatio as='figure' flexShrink={0} w={{base: 60, md: 80}} h={{base: 60, md: 80}} ratio={1}>
+      <AspectRatio as='figure' ml='8' flexShrink={0} w={{base: 60, md: 80}} h={{base: 60, md: 80}} ratio={1}>
         
         <Box overflow='hidden' rounded='full'>
           <NextImage
@@ -64,7 +64,7 @@ const SectionHero = () => {
       </AspectRatio>
 
 
-    </Stack>
+    </Flex>
   );
 };
 

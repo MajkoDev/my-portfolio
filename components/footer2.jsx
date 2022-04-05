@@ -4,16 +4,13 @@ import {
   VStack,
   Divider,
   Link,
-  Box,
+  Flex,
   chakra,
   Text,
-  Button,
   HStack,
   Heading,
-  Container,
   Spacer,
 } from "@chakra-ui/react";
-import { PhoneIcon } from "@chakra-ui/react";
 
 const Footer2 = () => {
   return (
@@ -21,86 +18,56 @@ const Footer2 = () => {
       <Divider />
 
       <Stack w='full' direction={{ base: "column", md: "row" }}>
-        {/* lets contact */}
         <VStack alignItems='flex-start'>
+          <Text ml='1' fontWeight='200'>Ako ma kontaktovať?</Text>
           <NextLink href='/contact' passHref>
             <Link>
-              <Heading size='2xl'>Poslať správu</Heading>
+              <Heading
+                fontWeight='400'
+                _hover={{ fontWeight: "600" }}
+                size='xl'>
+                Poslať správu
+              </Heading>
             </Link>
           </NextLink>
-          <Text>Ako poslať správu?</Text>
         </VStack>
         <Spacer />
 
-        {/* icons */}
         <HStack alignItems='end'>
           <Spacer />
-          {/* <Box>
+          <HStack alignItems='flex-start'>
             <NextLink href='/' passHref>
-              <Link textStyle='h3' _hover={{ color: "teal.300" }}>
+              <Link
+                textStyle='h3'
+                fontWeight='semibold'
+                _hover={{ color: "#e02251" }}>
                 Github
               </Link>
             </NextLink>
-          </Box> */}
+            <NextLink href='/' passHref>
+              <Link
+                textStyle='h3'
+                fontWeight='semibold'
+                _hover={{ color: "#e02251" }}>
+                Letterboxd
+              </Link>
+            </NextLink>
+          </HStack>
 
-
-        <HStack alignItems='flex-start'>
-          <NextLink href='/' passHref>
-            <Link textStyle='h3' fontWeight='semibold' _hover={{ color: "#e02251" }}>
-              Github
-            </Link>
-          </NextLink>
-          <NextLink href='/' passHref>
-            <Link textStyle='h3' fontWeight='semibold' _hover={{ color: "#e02251" }}>
-              Letterboxd
-            </Link>
-          </NextLink>
-        </HStack>
-
-          {/* <Button colorScheme='blue' rounded='50px' p='1'>L</Button> */}
         </HStack>
       </Stack>
 
-      {/* list */}
-
-      <Stack spacing='4' minW='36' flex='1'>
-        <Text fontSize='sm' fontWeight='semibold' color='subtle'>
-          Product
-        </Text>
-      </Stack>
-
-      <Stack
-        justifyContent='space-between'
-        w='full'
-        direction={{ base: "column", md: "row" }}
-        alignItems={{ base: "flex-start", md: "center" }}>
-        <VStack alignItems='flex-start' spacing={2}>
-          <NextLink href='/' passHref>
-            <Link>O mne</Link>
-          </NextLink>
-          <NextLink href='/' passHref>
-            <Link>Portfolio</Link>
-          </NextLink>
-          <NextLink href='/' passHref>
-            <Link>Kontakt</Link>
-          </NextLink>
-        </VStack>
-
-        <HStack alignItems='flex-start'>
-          <NextLink href='/' passHref>
-            <Link textStyle='h3' _hover={{ color: "teal.300" }}>
-              Github
-            </Link>
-          </NextLink>
-          <NextLink href='/' passHref>
-            <Link textStyle='h3' _hover={{ color: "teal.300" }}>
-              Letterboxd
-            </Link>
-          </NextLink>
-        </HStack>
-
-        <VStack alignItems='flex-start'></VStack>
-      </Stack>
+      <Flex justifyContent='center' direction={{ base: "column", md: "row" }}>
+        <NextLink href='/' passHref>
+          <Link fontSize='18' px='6'>O mne</Link>
+        </NextLink>
+        <NextLink href='/' passHref>
+          <Link fontSize='18' px='6'>Portfolio</Link>
+        </NextLink>
+        <NextLink href='/' passHref>
+          <Link fontSize='18' px='6'>Kontakt</Link>
+        </NextLink>
+      </Flex>
 
       <Stack
         alignItems='center'
