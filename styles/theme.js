@@ -22,6 +22,7 @@ const theme = extendTheme({
   },
   // customize colors
   colors: {
+   
     blue: {
       50: "#99c8ff",
       100: "#bdd6f4",

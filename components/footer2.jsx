@@ -1,7 +1,9 @@
 import NextLink from "next/link";
 import {
   Stack,
+  Box,
   VStack,
+  PseudoBox,
   Divider,
   Link,
   Flex,
@@ -19,7 +21,9 @@ const Footer2 = () => {
 
       <Stack w='full' direction={{ base: "column", md: "row" }}>
         <VStack alignItems='flex-start'>
-          <Text ml='1' fontWeight='200'>Ako ma kontaktovať?</Text>
+          <Text ml='1' fontWeight='200'>
+            Ako ma kontaktovať?
+          </Text>
           <NextLink href='/contact' passHref>
             <Link>
               <Heading
@@ -53,19 +57,52 @@ const Footer2 = () => {
               </Link>
             </NextLink>
           </HStack>
-
         </HStack>
       </Stack>
 
       <Flex justifyContent='center' direction={{ base: "column", md: "row" }}>
-        <NextLink href='/' passHref>
-          <Link fontSize='18' px='6'>O mne</Link>
+        <NextLink href='/about' passHref>
+          <Link
+            fontSize='18'
+            mx='3'
+            p='3'
+            _hover={{
+              boxShadow: "2xl",
+              fontWeight: "semibold",
+              rounded: "2xl",
+              a: "u",
+            }}>
+            O mne
+          </Link>
         </NextLink>
-        <NextLink href='/' passHref>
-          <Link fontSize='18' px='6'>Portfolio</Link>
+
+        <NextLink href='/portfolio' passHref>
+          <Link
+            fontSize='18'
+            mx='3'
+            p='3'
+            _hover={{
+              boxShadow: "2xl",
+              fontWeight: "semibold",
+              rounded: "2xl",
+              a: "u",
+            }}>
+            Portfolio
+          </Link>
         </NextLink>
-        <NextLink href='/' passHref>
-          <Link fontSize='18' px='6'>Kontakt</Link>
+        <NextLink href='/contact' passHref>
+          <Link
+            fontSize='18'
+            mx='3'
+            p='3'
+            _hover={{
+              boxShadow: "2xl",
+              fontWeight: "semibold",
+              rounded: "2xl",
+              a: "u",
+            }}>
+            Kontakt
+          </Link>
         </NextLink>
       </Flex>
 

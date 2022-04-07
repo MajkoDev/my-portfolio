@@ -9,7 +9,6 @@ export default function GithubLink() {
         <a target='_blank' rel='noreferrer'>
           <Button variant='ghost'>
             <HStack>
-              
               <Heading fontSize={{ base: "lg", md: "2xl" }} fontWeight={300}>
                 navštív môj{" "}
               </Heading>
