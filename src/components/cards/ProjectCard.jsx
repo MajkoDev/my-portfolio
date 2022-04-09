@@ -21,11 +21,14 @@ const CardExample = () => {
         rounded='md'
         boxShadow='2xl'
         overflow='hidden'>
+
         <Flex direction={{ base: "column", md: "row" }}>
+
           <Box
             w={{ base: "full", md: "45%" }}
             h={{ base: "240", md: "264px" }}
             position='relative'>
+              
             <Image
               alt='Project Image'
               src={mac}
