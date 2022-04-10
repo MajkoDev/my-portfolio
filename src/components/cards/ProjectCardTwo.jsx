@@ -1,7 +1,7 @@
 import {
   VStack,
   Box,
-  Heading,
+  Heading, WrapItem,
   Spacer,
   Stack,
   Text,
@@ -14,11 +14,12 @@ import mac from "../../../public/images/mac.jpg";
 
 const ProjectCardTwo = () => {
   return (
-    <>
+    <WrapItem>
       <Box
         h={{ base: "400px", md: "264px" }}
         w={{ base: "md", md: "2xl" }}
         rounded='md'
+        mb='10'
         boxShadow='2xl'
         overflow='hidden'>
         <Flex direction={{ base: "column", md: "row" }}>
@@ -80,7 +81,7 @@ const ProjectCardTwo = () => {
           </Box>
         </Flex>
       </Box>
-    </>
+    </WrapItem>
   );
 };
 

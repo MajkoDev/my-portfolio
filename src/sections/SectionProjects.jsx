@@ -1,20 +1,21 @@
-import { Stack, VStack } from "@chakra-ui/react";
+// Chakra Ui
+import { Stack, Wrap } from "@chakra-ui/react";
 
-// Components
-import ProjectCard from "../components/cards/ProjectCard";
-import ProjectCardTwo from "../components/cards/ProjectCardTwo";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
+
+// Components
+import ProjectCardTwo from "../components/cards/ProjectCardTwo";
 
 const SectionProjects = () => {
   return (
     <Stack h='full' w='full'>
       <SectionTitle title='projekty.' subtitle='Čo som naposledy vytvoril?' />
 
-      <VStack spacing='24px'>
-        <ProjectCard />
+      <Wrap spacing='24px' w='full' justify='center'>
         <ProjectCardTwo />
-      </VStack>
+        <ProjectCardTwo />
+      </Wrap>
     </Stack>
   );
 };
