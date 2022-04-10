@@ -1,10 +1,11 @@
-import { Flex, Container, Stack, Box, Heading, Text } from "@chakra-ui/react";
+import { Flex, Stack, Box, Heading, Text, WrapItem } from "@chakra-ui/react";
 import Image from "next/image";
 
 import vsc from "../../public/icons/icon-vsc.jpg";
 
-const SoftwareCard = () => {
+const SoftwareCard = ({icon}) => {
   return (
+    <WrapItem>
     <Box
       rounded='lg'
       p='3'
@@ -17,7 +18,7 @@ const SoftwareCard = () => {
         direction={{ base: "column", md: "column", lg: "row" }}>
         <Stack w='100px' mr={{ base: "0", md: "4" }} align='center'>
           <Box>
-            <Image alt='Icon' src={vsc}></Image>
+            <Image alt='Icon' src={icon}></Image>
           </Box>
         </Stack>
 
@@ -34,7 +35,7 @@ const SoftwareCard = () => {
           </Text>
         </Stack>
       </Flex>
-    </Box>
+    </Box></WrapItem>
   );
 };
 
