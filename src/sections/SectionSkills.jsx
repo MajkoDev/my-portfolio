@@ -1,54 +1,73 @@
-import { Container, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Container,
+  VStack,
+  Wrap,
+  WrapItem,
+  Stack,
+  Text,
+  Flex,
+} from "@chakra-ui/react";
 
 // Elements
+// = TitleSection TitleSkill
 import SectionTitle from "../elements/SectionTitle";
-import SectionText from "../elements/SectionText";
 import SkillTitle from "../ABOUT/SkillTitle";
+
+// Card Components
+// = SoftwareCard, SkillCard
 import SoftwareCard from "../ABOUT/SoftwareCard";
+import SkillCard from "../ABOUT/SkillCard";
 
 const SectionSkills = () => {
   return (
     <Stack h='full' w='full'>
-      {/* TITLE */}
+      {/* SECTION TITLE */}
       <SectionTitle
         title='Schopnosti.'
         subtitle='vedomosti, technologie, jazyky, nástroje'
       />
 
-      {/* LAYOUT */}
-
-      <Heading fontSize='xl'>Technologies</Heading>
-      <Text fontSize='md'>Visual Studio Code</Text>
-      <Text fontSize='md'>Figma</Text>
-
+      {/* SECTION OF SOFTWARE */}
 
       <Stack
-        w='full'
         display='flex'
-        direction={{ base: "column", md: "row" }}
-        minH='200px'
-        bg='gray.100'>
-        <SkillTitle software='technologie' />
-        {/* <SoftwareCard /> */}
+        align={{ base: "center", lg: "start" }}
+        direction={{ base: "column", lg: "row" }}
+        pb='70px'
+        // bg='gray.200'
+        // _hover={{ bg: "gray.300" }}
+      >
+        <SkillTitle software='Technologie' />
 
-        <Container>
-          <SoftwareCard />
-          
-        </Container>
+        <Wrap justify='center' align='center'>
+          <WrapItem>
+            <SoftwareCard />
+          </WrapItem>
+          <WrapItem>
+            <SoftwareCard />
+          </WrapItem>
+        </Wrap>
       </Stack>
 
+      {/* SECTION OF SKILLS */}
+      <Stack
+        display='flex'
+        align={{ base: "center", lg: "start" }}
+        direction={{ base: "column", lg: "row" }}
+        pb='70px'
+        bg='gray.100'
+        _hover={{ bg: "gray.200" }}>
+        <SkillTitle software='Schopnosti' />
 
-
-
-      <Container>
-        <Heading fontSize='lg'>základy web vývoja.</Heading>
-      </Container>
-
-      {/* CARDS: 1-4 */}
-      <SectionText
-        title='nonoe'
-        description='Technologie, jazyky, nástroje, Technologie, jazyky, nástroje, Technologie, jazyky, nástroje,'
-      />
+        <Wrap justify='center' align='center'>
+          <WrapItem>
+            <SkillCard />
+          </WrapItem>
+          <WrapItem>
+            <SkillCard />
+          </WrapItem>
+        </Wrap>
+      </Stack>
     </Stack>
   );
 };
