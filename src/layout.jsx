@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
       px={{ base: 4, lg: 0 }}
       centerContent>
       <Header />
+
       <VStack alignItems='stretch' flex={1} w='full' spacing={16}>
         <VStack as='main' flex={1} w='full' spacing={16}>
           {children}
