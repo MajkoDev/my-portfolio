@@ -1,5 +1,6 @@
 import { Flex, WrapItem, Stack, Box, Heading, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 const Number = styled(Heading)`
   background: linear-gradient(
@@ -17,30 +18,32 @@ const Number = styled(Heading)`
 const SkillCard = ({ id, title, description }) => {
   return (
     <WrapItem>
-      <Box
-        rounded='lg'
-        p='3'
-        m='3'
-        w={{ base: "md", md: "lg", lg: "2xl" }}
-        bg='white'
-        boxShadow='lg'>
-        <Flex align='center' direction='row'>
-          <Stack mx='4' align='start'>
-            <Number fontWeight={900} fontSize='8xl'>
-              {id}
-            </Number>
-          </Stack>
+      <motion.div whileHover={{ scale: 1.05 }}>
+        <Box
+          rounded='lg'
+          p='3'
+          m='3'
+          w={{ base: "md", md: "lg", lg: "2xl" }}
+          bg='white'
+          boxShadow='lg'>
+          <Flex align='center' direction='row'>
+            <Stack mx='4' align='start'>
+              <Number fontWeight={900} fontSize='8xl'>
+                {id}
+              </Number>
+            </Stack>
 
-          <Stack>
-            <Heading
-              align={{ base: "center", lg: "start" }}
-              fontSize={{ base: "lg", md: "lg" }}>
-              {title}
-            </Heading>
-            <Text fontSize={{ base: "sm", md: "sm" }}>{description}</Text>
-          </Stack>
-        </Flex>
-      </Box>
+            <Stack>
+              <Heading
+                align={{ base: "center", lg: "start" }}
+                fontSize={{ base: "lg", md: "lg" }}>
+                {title}
+              </Heading>
+              <Text fontSize={{ base: "sm", md: "sm" }}>{description}</Text>
+            </Stack>
+          </Flex>
+        </Box>
+      </motion.div>
     </WrapItem>
   );
 };
