@@ -1,15 +1,15 @@
 import {
   Heading,
-  Image,
-  Link, Flex,
+  Link,
+  Flex, HStack,
   Box,
   AspectRatio,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import avatar from "../../public/images/avatar.gif";
-import Mac from "../../public/images/mac.jpg";
 import NextImage from "next/image";
+import {BiCopy} from "react-icons/bi"
 
 const SectionHero = () => {
   return (
@@ -20,8 +20,7 @@ const SectionHero = () => {
       flexDirection={{ base: " column", md: "row" }}
       alignItems='center'
       justifyContent='center'>
-
-      <Stack my='10'  direction='column'>
+      <Stack my='10' direction='column'>
         <Text fontSize={{ base: "2xl", md: "4xl" }} mb='-5' w='100%'>
           Volám sa,
         </Text>
@@ -32,27 +31,23 @@ const SectionHero = () => {
           sa venujem dizajnu.
         </Text>
 
-        <Link fontSize={{ base: "sm", md: "lg" }} fontWeight={500}>
+        <HStack _hover={{bg:'yellow.100'}} w='full'>
+        <Link fontSize={{ base: "sm", md: "lg" }} p='1' rounded='5px' fontWeight={500}>
           hellomariandev@gmail.com
         </Link>
+        <BiCopy display='none' />
+        </HStack>
+
+       
       </Stack>
 
-      {/* 
-      <Image
-        src='https://bit.ly/dan-abramov'
-        boxSize='250px'
-        borderRadius='full'
-        alt='Profile'
-      />{" "} */}
-
-        {/* 
-            40 44 48 56 60 64 72 80 96
-
-            e02251 0d1068
-        */}
-
-      <AspectRatio as='figure' ml='8' flexShrink={0} w={{base: 60, md: 80}} h={{base: 60, md: 80}} ratio={1}>
-        
+      <AspectRatio
+        as='figure'
+        ml='8'
+        flexShrink={0}
+        w={{ base: 60, md: 80 }}
+        h={{ base: 60, md: 80 }}
+        ratio={1}>
         <Box overflow='hidden' rounded='full'>
           <NextImage
             src={avatar}
@@ -62,8 +57,6 @@ const SectionHero = () => {
           />
         </Box>
       </AspectRatio>
-
-
     </Flex>
   );
 };
