@@ -10,6 +10,7 @@ import {
 import avatar from "../../public/images/avatar.gif";
 import NextImage from "next/image";
 import {BiCopy} from "react-icons/bi"
+import EmailCopy from "../elements/EmailCopy"
 
 const SectionHero = () => {
   return (
@@ -31,13 +32,10 @@ const SectionHero = () => {
           sa venujem dizajnu.
         </Text>
 
-        <HStack _hover={{bg:'yellow.100'}} w='full'>
-        <Link fontSize={{ base: "sm", md: "lg" }} p='1' rounded='5px' fontWeight={500}>
-          hellomariandev@gmail.com
-        </Link>
-        <BiCopy display='none' />
-        </HStack>
+        
+        <EmailCopy />
 
+ 
        
       </Stack>
 
