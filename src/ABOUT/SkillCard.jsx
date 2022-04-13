@@ -15,6 +15,7 @@ const Number = styled(Heading)`
   font-weight: 800;
 `;
 
+
 const SkillCard = ({ id, title, description }) => {
   return (
     <WrapItem>

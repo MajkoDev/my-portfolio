@@ -40,21 +40,25 @@ const Footer2 = () => {
         <HStack alignItems='end'>
           <Spacer />
           <HStack alignItems='flex-start'>
-            <NextLink href='/' passHref>
-              <Link
-                textStyle='h3'
-                fontWeight='semibold'
-                _hover={{ color: "#e02251" }}>
-                Github
-              </Link>
+            <NextLink href='https://github.com/MajkoDev' passHref>
+              <a target='_blank' rel='noreferrer'>
+                <Link
+                  textStyle='h3'
+                  fontWeight='semibold'
+                  _hover={{ color: "#e02251" }}>
+                  Github
+                </Link>
+              </a>
             </NextLink>
-            <NextLink href='/' passHref>
-              <Link
-                textStyle='h3'
-                fontWeight='semibold'
-                _hover={{ color: "#e02251" }}>
-                Letterboxd
-              </Link>
+            <NextLink href='https://letterboxd.com/Stupel/' passHref>
+              <a target='_blank' rel='noreferrer'>
+                <Link
+                  textStyle='h3'
+                  fontWeight='semibold'
+                  _hover={{ color: "#e02251" }}>
+                  Letterboxd
+                </Link>
+              </a>
             </NextLink>
           </HStack>
         </HStack>
