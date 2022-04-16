@@ -18,7 +18,7 @@ const EmailCopy = () => {
 
   function copyEmail() {
     navigator.clipboard.writeText(email);
-    setCopySuccessMessage(<IoCopy size='26px' />);
+    setCopySuccessMessage(<IoCopy size='24px' />);
     setInstructions("");
   }
 
@@ -26,7 +26,7 @@ const EmailCopy = () => {
     if (copySuccessMessage) {
       return;
     }
-    setInstructions(<IoCopyOutline size='26px' />);
+    setInstructions(<IoCopyOutline size='24px' />);
   }
 
   function hideInstruction() {
@@ -35,7 +35,7 @@ const EmailCopy = () => {
 
   return (
     <HStack>
-      <Link fontSize={{ base: "sm", md: "lg" }} rounded='5px' fontWeight={500}>
+      <Link fontSize={{ base: "md", md: "lg" }} rounded='5px' fontWeight={500}>
         <Text
           onClick={copyEmail}
           onMouseOver={showInstruction}
@@ -43,7 +43,7 @@ const EmailCopy = () => {
           {email}
         </Text>
       </Link>
-      <Text fontWeight={600}>
+      <Text fontWeight={600} >
         {instructions} {copySuccessMessage}{" "}
       </Text>
     </HStack>

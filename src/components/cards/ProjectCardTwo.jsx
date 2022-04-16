@@ -11,10 +11,13 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import mac from "../../../public/images/mac.jpg";
+import { motion } from "framer-motion";
 
 const ProjectCardTwo = () => {
   return (
     <WrapItem>
+            <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>
+
       <Box
         h={{ base: "400px", md: "264px" }}
         w={{ base: "md", md: "2xl" }}
@@ -80,7 +83,7 @@ const ProjectCardTwo = () => {
             </Flex>
           </Box>
         </Flex>
-      </Box>
+      </Box> </motion.div>
     </WrapItem>
   );
 };

@@ -22,11 +22,11 @@ const SectionHero = () => {
       alignItems='center'
       justifyContent='center'>
       <Stack my='10' direction='column'>
-        <Text fontSize={{ base: "2xl", md: "4xl" }} mb='-5' w='100%'>
+        <Text fontSize={{ base: "3xl", md: "4xl" }} mb='-5' w='100%'>
           Volám sa,
         </Text>
-        <Heading fontSize={{ base: "5xl", md: "7xl" }}>Marian.</Heading>
-        <Text fontSize={{ base: "sm", md: "lg" }} fontWeight={300}>
+        <Heading fontSize={{ base: "6xl", md: "7xl" }}>Marian.</Heading>
+        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={300}>
           <strong> front-end (samouk) developer </strong> zo západného
           Slovenska. <br /> nadšenec pre <strong>React</strong>, príležitostne
           sa venujem dizajnu.
