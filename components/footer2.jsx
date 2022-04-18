@@ -50,7 +50,7 @@ const Footer2 = () => {
                 </Link>
               </a>
             </NextLink>
-            <NextLink href='https://letterboxd.com/Stupel/' passHref>
+            <NextLink href='https://letterboxd.com/majkodev/' passHref>
               <a target='_blank' rel='noreferrer'>
                 <Link
                   textStyle='h3'

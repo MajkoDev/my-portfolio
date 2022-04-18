@@ -28,6 +28,8 @@ const SectionSkills = () => {
 
       <Stack
         display='flex'
+        id='skills'
+
         align={{ base: "center", lg: "start" }}
         direction={{ base: "column", lg: "row" }}
         pb='50px'>
@@ -42,6 +44,7 @@ const SectionSkills = () => {
       {/* SECTION OF SKILLS */}
       <Stack
         display='flex'
+        id='languages'
         align={{ base: "center", lg: "start" }}
         direction={{ base: "column", lg: "row" }}
         pb='50px'>

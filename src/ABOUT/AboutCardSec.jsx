@@ -3,32 +3,32 @@ import NextLink from "next/link";
 
 const AboutCardSec = () => {
   return (
-    <Box>
-      <Container maxW='container.sm'>
+    <Box w='xl'>
+      <Container maxW='container'>
         <Text fontWeight='light' textAlign='center'>
           Všetky dôležité informácie sa dajú zhrnúť do,...
         </Text>
 
         <Text textAlign='center' fontSize={{ base: "lg", md: "xl" }}>
-          Volám sa {" "}
+          Volám sa{" "}
           <NextLink href='/' passHref>
             <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
               Marián
             </Link>
           </NextLink>
-          .
-          <br />
-          Poznám tieto {" "}
-          <NextLink href='/' passHref>
-            <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
-              jazyky
-            </Link>
-          </NextLink>
-          . <br />
-          Vyskúšal tieto {" "}
-          <NextLink href='/' passHref>
+          .<br />
+          Vyskúšal tieto{" "}
+          <NextLink href='#skills' passHref>
             <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
               technologie
+            </Link>
+          </NextLink>
+          .
+          <br />
+          Poznám tieto{" "}
+          <NextLink href='#languages' passHref>
+            <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
+              jazyky
             </Link>
           </NextLink>
           .
@@ -36,7 +36,7 @@ const AboutCardSec = () => {
 
         <Text textAlign='center' fontSize={{ base: "lg", md: "xl" }}>
           Moje schopnosti môžeš <br /> vidieť na{" "}
-          <NextLink href='/' passHref>
+          <NextLink href='/portfolio' passHref>
             <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
               týchto projektoch
             </Link>
@@ -44,7 +44,7 @@ const AboutCardSec = () => {
           .
           <br />
           Tu je{" "}
-          <NextLink href='/' passHref>
+          <NextLink href='/contact' passHref>
             <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
               kontakt
             </Link>
