@@ -1,4 +1,12 @@
-import { Flex, WrapItem, Stack, Box, Heading, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  WrapItem,
+  Stack,
+  Box,
+  Heading,
+  useColorModeValue,
+  Text,
+} from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
@@ -15,8 +23,10 @@ const Number = styled(Heading)`
   font-weight: 800;
 `;
 
-
 const SkillCard = ({ id, title, description }) => {
+  const color = useColorModeValue("blue.800", "blue.800");
+  const bg = useColorModeValue("white", "gray.50");
+
   return (
     <WrapItem>
       <motion.div whileHover={{ scale: 1.05 }}>
@@ -24,8 +34,9 @@ const SkillCard = ({ id, title, description }) => {
           rounded='lg'
           p='3'
           m='3'
+          color={color}
           w={{ base: "md", md: "lg", lg: "2xl" }}
-          bg='white'
+          bg={bg}
           boxShadow='lg'>
           <Flex align='center' direction='row'>
             <Stack mx='4' align='start'>

@@ -1,4 +1,4 @@
-import { Wrap, WrapItem, Stack } from "@chakra-ui/react";
+import { Wrap, WrapItem, Avatar, AvatarBadge,  Stack } from "@chakra-ui/react";
 
 // Elements
 // = TitleSection TitleSkill
@@ -12,7 +12,8 @@ import SkillCard from "../ABOUT/SkillCard";
 
 // images
 import vsc from "../../public/icons/icon-vsc.jpg";
-import figma from "../../public/images/icon-figma.jpg"
+import visual from "../../public/icons/visual.svg";
+import figma from "../../public/icons/Component7.svg"
 
 
 const SectionSkills = () => {
@@ -36,7 +37,7 @@ const SectionSkills = () => {
         <SkillTitle software='Technologie' />
 
         <Wrap justify='center' align='center'>
-            <SoftwareCard icon={vsc} />
+            <SoftwareCard icon={visual} />
             <SoftwareCard icon={figma} />
         </Wrap>
       </Stack>
