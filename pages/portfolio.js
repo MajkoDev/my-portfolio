@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
 
 // Sections
@@ -15,10 +16,11 @@ import { setContext } from "@apollo/client/link/context";
 
 // Page
 export default function Portfolio({ pinnedItems }) {
-  console.log("pinnedItems", pinnedItems);
-
   return (
     <Stack h='full' w='full'>
+      <Head>
+        <title>MajkoDev - Portfolio</title>
+      </Head>
       <SectionProjects />
       <SectionGithub pinnedItems={pinnedItems} />
     </Stack>

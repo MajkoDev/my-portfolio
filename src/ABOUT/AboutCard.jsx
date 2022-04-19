@@ -13,7 +13,7 @@ const AboutCard = ({ title, description, alignment, titleAlignment }) => {
           color={color}
           fontWeight={400}
           align={alignment}
-          fontSize={{ base: "md", md: "md" }}>
+          fontSize={{ base: "1rem", md: "1.075rem" }}>
           {description}
         </Text>
       </Container>

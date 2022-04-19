@@ -20,7 +20,7 @@ const Subtitle = styled(Text)`
 const AboutSubtitle = ({ title, titleAlignment }) => {
   return (
     <Stack align={titleAlignment} mz='4'>
-      <Text fontSize={{ base: "xl", md: "2xl" }}>
+      <Text fontSize={{ base: "1.4rem", md: "1.7rem" }}>
         <Subtitle>{title}</Subtitle>
       </Text>
     </Stack>

@@ -5,11 +5,14 @@ const AboutCardSec = () => {
   return (
     <Box w='xl'>
       <Container maxW='container'>
-        <Text fontWeight='light' textAlign='center'>
+        <Text
+          fontWeight='light'
+          textAlign='center'
+          fontSize={{ base: "1.05rem", md: "1.075rem" }}>
           Všetky dôležité informácie sa dajú zhrnúť do,...
         </Text>
 
-        <Text textAlign='center' fontSize={{ base: "lg", md: "xl" }}>
+        <Text textAlign='center' fontSize={{ base: "1.25rem", md: "1.4rem" }}>
           Volám sa{" "}
           <NextLink href='/' passHref>
             <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
@@ -34,7 +37,7 @@ const AboutCardSec = () => {
           .
         </Text>
 
-        <Text textAlign='center' fontSize={{ base: "lg", md: "xl" }}>
+        <Text textAlign='center' fontSize={{ base: "1.25rem", md: "1.4rem" }}>
           Moje schopnosti môžeš <br /> vidieť na{" "}
           <NextLink href='/portfolio' passHref>
             <Link _hover={{ color: "pink.800" }} fontWeight='bold'>
