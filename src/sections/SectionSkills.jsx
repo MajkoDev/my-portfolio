@@ -13,7 +13,7 @@ import SkillCard from "../ABOUT/SkillCard";
 // images
 import vsc from "../../public/icons/icon-vsc.jpg";
 import visual from "../../public/icons/visual.svg";
-import figma from "../../public/icons/Component7.svg"
+import figma from "../../public/icons/figma_logo_icon.svg"
 
 
 const SectionSkills = () => {

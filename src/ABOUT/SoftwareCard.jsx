@@ -5,8 +5,6 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Avatar,
-  AvatarBadge,
   WrapItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -30,9 +28,9 @@ const SoftwareCard = ({ icon }) => {
             align='center'
             direction={{ base: "column", md: "column", lg: "row" }}>
             <Stack w='100px' mr={{ base: "0", md: "4" }} >
-              <Box>
+              <Box mb={{base: '4', lg: '0'}}>
               <Image
-                alt='Icon'  
+                alt='Icon'  layout="responsive"
                 src={icon}></Image>
               </Box>
               
