@@ -11,6 +11,7 @@ import {
   createHttpLink,
   InMemoryCache,
   gql,
+  
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
@@ -42,10 +43,12 @@ export async function getStaticProps() {
     };
   });
 
+  
   const client = new ApolloClient({
     link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
   });
+
 
   const { data } = await client.query({
     query: gql`

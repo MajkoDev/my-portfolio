@@ -4,7 +4,7 @@ import { Stack } from "@chakra-ui/react";
 // Sections
 import SectionHero from "../src/sections/SectionHero";
 
-export default function Home() {
+export default function Home({ countries }) {
   return (
     <Stack h='full' w='full'>
       <Head>

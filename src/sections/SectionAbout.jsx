@@ -49,6 +49,7 @@ const SectionAbout = () => {
           description='Po skončení gymnázia ma žiadna vysoká škola neoslovila. Rozhodol som sa naučiť webový dizajn popri práci. Počul som, že je možné sa stať programátorom aj bez školy. Preto som sa začal samovzdelávať a učiť sa na vlastnú päsť.
           '
         />
+        
       </VStack>
     </Stack>
   );

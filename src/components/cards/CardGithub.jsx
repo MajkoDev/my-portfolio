@@ -43,14 +43,19 @@ const CardGithub = (item) => {
 
                   <Spacer />
 
-                  <NextLink href='/' passHref>
+
+                    {/* Codesandbox */}
+                  {/* <NextLink href='/' passHref>
                     <Link fontWeight='600' fontSize='xs'>
                       <HStack>
                         <FiCodesandbox m='2' />
                         <Text>CodeSandBox</Text>
                       </HStack>
                     </Link>
-                  </NextLink>
+                  </NextLink> */}
+
+
+
                 </Flex>
 
                 <Text fontSize='xs' mb='5'>
@@ -59,12 +64,12 @@ const CardGithub = (item) => {
                 <Spacer />
 
                 <HStack mr='2'>
-                  <Text fontSize='xs' fontWeight='semibold'>
+                  {/* <Text fontSize='xs' fontWeight='semibold'>
                     React Tailwind Firebase
-                  </Text>
+                  </Text> */}
                   <Spacer />
 
-                  {/* <NextLink href={item.url} passHref>
+                   <NextLink href={item.url} passHref>
               <a target='_blank' rel='noreferrer'>
                 <Button
                   variant='ghost'
@@ -74,7 +79,7 @@ const CardGithub = (item) => {
                   <ImGithub />{" "}
                 </Button>
               </a>
-            </NextLink> */}
+            </NextLink> 
                 </HStack>
               </Stack>
             </a>

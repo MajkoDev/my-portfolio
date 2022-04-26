@@ -10,6 +10,10 @@ import theme from "../styles/theme";
 import Layout from "../components/layout";
 import { motion, AnimatePresence } from "framer-motion";
 
+
+
+
+
 function MyApp({ Component, pageProps, router }) {
 
   const variants = {
