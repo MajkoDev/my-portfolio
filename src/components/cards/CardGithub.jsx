@@ -1,6 +1,5 @@
 import {
   Heading,
-  Link,
   Text,
   Button,
   Stack,
@@ -19,6 +18,7 @@ import { motion } from "framer-motion";
 const CardGithub = (item) => {
   const colorTitle = useColorModeValue("gray.800", "gray.200");
 
+  console.log(item.primaryLanguage.name)
   return (
     <WrapItem>
       <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>
@@ -64,9 +64,9 @@ const CardGithub = (item) => {
                 <Spacer />
 
                 <HStack mr='2'>
-                  {/* <Text fontSize='xs' fontWeight='semibold'>
-                    React Tailwind Firebase
-                  </Text> */}
+                   <Text fontSize='xs' fontWeight='semibold'>
+                   {item.primaryLanguage.name}
+                  </Text> 
                   <Spacer />
 
                    <NextLink href={item.url} passHref>

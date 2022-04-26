@@ -11,7 +11,6 @@ import {
   createHttpLink,
   InMemoryCache,
   gql,
-  
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
@@ -63,6 +62,10 @@ export async function getStaticProps() {
                   name
                   url
                   description
+                  primaryLanguage {
+                    name
+                    color
+                  }
                 }
               }
             }
@@ -74,6 +77,7 @@ export async function getStaticProps() {
 
   const { user } = data;
   const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node);
+  // console.log(pinnedItems.name)
 
   return {
     props: {
