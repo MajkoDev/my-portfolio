@@ -7,7 +7,10 @@ import AboutCardSec from "../ABOUT/AboutCardSec";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
 
-const SectionAbout = () => {
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
+
+const SectionAbout = ({ abouts }) => {
   return (
     <Stack h='full' w='full'>
       <SectionTitle title='O mne.' subtitle='Čo o sebe prezradím?' />
@@ -18,6 +21,7 @@ const SectionAbout = () => {
           titleAlignment='start'
           description='Neviem čo by som mal o sebe napísať. Neviem ako a čím by som mal zaujať. Je vôbec fér, snažiť sa okúzliť prvým dojmom? Asi preto som nikdy nebol veľmi do facebooku.'
         />
+        
         <AboutCardSec />
       </VStack>
 
@@ -56,3 +60,7 @@ const SectionAbout = () => {
 };
 
 export default SectionAbout;
+
+
+
+

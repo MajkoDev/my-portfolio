@@ -21,7 +21,7 @@ export default function SectionGithub({ pinnedItems }) {
             return <CardGithub key={item.id} {...item} />;
           })}
         </Wrap>
-        
+
         <Center>
           <GithubLink />
         </Center>
