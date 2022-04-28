@@ -7,15 +7,17 @@ import AboutCardSec from "../ABOUT/AboutCardSec";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
 
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-
-
 const SectionAbout = ({ abouts }) => {
+
+    console.log(abouts)
+
+
   return (
     <Stack h='full' w='full'>
       <SectionTitle title='O mne.' subtitle='Čo o sebe prezradím?' />
 
       <VStack>
+
         <AboutCard
           title='Kto som'
           titleAlignment='start'

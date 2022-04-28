@@ -22,8 +22,7 @@ import vsc from "../../public/icons/icon-vsc.jpg";
 import visual from "../../public/icons/visual.svg";
 import figma from "../../public/icons/figma_logo_icon.svg";
 
-const SectionSkills = ({ skills }) => {
-  console.log(skills);
+const SectionSkills = () => {
   return (
     <Stack h='full' w='full'>
       {/* SECTION TITLE */}

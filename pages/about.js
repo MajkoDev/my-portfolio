@@ -7,13 +7,15 @@ import SectionSkills from "../src/sections/SectionSkills";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 const About = ({ abouts }) => {
-  console.log(abouts);
+  // console.log(abouts);
   return (
     <Stack h='full' w='full'>
       <Head>
         <title>MajkoDev - O mne</title>
       </Head>
-      <SectionAbout />
+      
+      
+      <SectionAbout abouts={abouts} />
 
       <SectionSkills />
     </Stack>
@@ -28,7 +30,7 @@ const client = new ApolloClient({
 });
 
 export async function getServerSideProps() {
-  const { about } = await client.query({
+  const { data } = await client.query({
     query: gql`
       query Abouts {
         abouts {
@@ -38,7 +40,7 @@ export async function getServerSideProps() {
             text
           }
           alignment
-        }
+        }      
       }
     `,
   });
@@ -49,5 +51,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-
