@@ -1,10 +1,6 @@
-import {
-  Wrap,
-  Stack
-} from "@chakra-ui/react";
+import { Wrap, Stack } from "@chakra-ui/react";
 
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-
 
 // Elements
 // = TitleSection TitleSkill
@@ -21,7 +17,9 @@ import vsc from "../../public/icons/icon-vsc.jpg";
 import visual from "../../public/icons/visual.svg";
 import figma from "../../public/icons/figma_logo_icon.svg";
 
-const SectionSkills = ({skills}) => {
+const SectionSkills = ({ skills }) => {
+  const techs = skills.skills;
+  console.log(techs);
 
   return (
     <Stack h='full' w='full'>
@@ -57,11 +55,19 @@ const SectionSkills = ({skills}) => {
         <SkillTitle software='Schopnosti' />
 
         <Wrap justify='center' align='center'>
-          <SkillCard
-            id='1'
-            title='základy web vývoja.'
-            description='poznám Html, Css, Javascript, ťažko si predstaviť pracovať bez nich. neustále sa k nim vraciam a využívam ich, keďže sú základom program. jazykov, s ktorými pracujem. stále si dopĺňam vedomosti z Javascriptu, keďže ho využívam pri práci v Reacte.'
-          />
+          
+            {techs.map((tech, i) => (
+              <SkillCard
+              key={i}
+              id={tech.idNumber}
+              title={tech.title}
+              description={tech.description.markdown}
+            />
+            ))}
+          
+          
+          
+
           {/* <SkillCard
             id='2'
             title='dizajnovanie.'
@@ -79,8 +85,6 @@ const SectionSkills = ({skills}) => {
 };
 
 export default SectionSkills;
-
-
 
 // const client = new ApolloClient({
 //   uri: "https://api-eu-west-2.graphcms.com/v2/cl2ghbbmv33qh01z629r9erpf/master",
