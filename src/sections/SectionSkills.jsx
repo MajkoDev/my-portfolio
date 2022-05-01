@@ -1,11 +1,10 @@
 import {
   Wrap,
-  WrapItem,
-  Avatar,
-  AvatarBadge,
-  Stack,
-  Text,
+  Stack
 } from "@chakra-ui/react";
+
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
 
 // Elements
 // = TitleSection TitleSkill
@@ -22,7 +21,8 @@ import vsc from "../../public/icons/icon-vsc.jpg";
 import visual from "../../public/icons/visual.svg";
 import figma from "../../public/icons/figma_logo_icon.svg";
 
-const SectionSkills = () => {
+const SectionSkills = ({skills}) => {
+
   return (
     <Stack h='full' w='full'>
       {/* SECTION TITLE */}
@@ -62,7 +62,7 @@ const SectionSkills = () => {
             title='základy web vývoja.'
             description='poznám Html, Css, Javascript, ťažko si predstaviť pracovať bez nich. neustále sa k nim vraciam a využívam ich, keďže sú základom program. jazykov, s ktorými pracujem. stále si dopĺňam vedomosti z Javascriptu, keďže ho využívam pri práci v Reacte.'
           />
-          <SkillCard
+          {/* <SkillCard
             id='2'
             title='dizajnovanie.'
             description='viem Css a hneď ako som objavil Sass, zamiloval som si ho. využil som Tailwind Css, Chakra Ui, Bootstrap 5… čoskoro pridám aj Material Ui. pri práci s Reactom som použil Styled-Comp aj Css-in-Js. mal by som začať využívať Storybook viacej.'
@@ -71,7 +71,7 @@ const SectionSkills = () => {
             id='3'
             title='Front-End.'
             description='venujem sa Reactu a jeho ekosystemu. potom ako sa človek naučí základy (hooks, context, router), vzdeláva sa podľa potreby. tvoril som projekty pomocou Gatsby a Next.js.'
-          />
+          /> */}
         </Wrap>
       </Stack>
     </Stack>
@@ -79,3 +79,32 @@ const SectionSkills = () => {
 };
 
 export default SectionSkills;
+
+
+
+// const client = new ApolloClient({
+//   uri: "https://api-eu-west-2.graphcms.com/v2/cl2ghbbmv33qh01z629r9erpf/master",
+//   cache: new InMemoryCache(),
+// });
+
+// export async function getServerSideProps() {
+//   const { data: skills } = await client.query({
+//     query: gql`
+//       query Skills {
+//         skills {
+//           title
+//           description {
+//             markdown
+//           }
+//           idNumber
+//         }
+//       }
+//     `,
+//   });
+
+//   return {
+//     props: {
+//       skills: data.skills,
+//     },
+//   };
+// }

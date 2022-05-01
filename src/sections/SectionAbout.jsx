@@ -9,7 +9,7 @@ import SectionTitle from "../elements/SectionTitle";
 
 const SectionAbout = ({ abouts }) => {
 
-    console.log(abouts)
+    
 
 
   return (

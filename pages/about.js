@@ -6,8 +6,9 @@ import SectionSkills from "../src/sections/SectionSkills";
 
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-const About = ({ abouts }) => {
-  // console.log(abouts);
+const About = ({ abouts, skills }) => {
+  
+  
   return (
     <Stack h='full' w='full'>
       <Head>
@@ -17,7 +18,7 @@ const About = ({ abouts }) => {
       
       <SectionAbout abouts={abouts} />
 
-      <SectionSkills />
+      <SectionSkills skills={skills} />
     </Stack>
   );
 };
@@ -30,7 +31,8 @@ const client = new ApolloClient({
 });
 
 export async function getServerSideProps() {
-  const { data } = await client.query({
+
+  const { data: abouts } = await client.query({
     query: gql`
       query Abouts {
         abouts {
@@ -45,9 +47,28 @@ export async function getServerSideProps() {
     `,
   });
 
+  const { data: skills } = await client.query({
+    query: gql`
+      query Skills {
+        skills {
+          title
+          description {
+            markdown
+          }
+          idNumber
+        }
+      }
+    `,
+  });
+
   return {
     props: {
-      abouts: data.abouts,
+      abouts, skills
     },
   };
+
+
+
 }
+
+
