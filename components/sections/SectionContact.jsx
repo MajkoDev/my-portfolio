@@ -7,7 +7,7 @@ import {
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";
-import ContactForm from "../components/form/ContactForm";
+import ContactForm from "../form/ContactForm";
 
 const SectionContact = () => {
   const bg = useColorModeValue("gray.200", "gray.100");

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
 
 // Sections
-import SectionContact from "../src/sections/SectionContact";
+import SectionContact from "../components/sections/SectionContact";
 
 const Contact = () => {
   return (

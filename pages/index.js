@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
 
 // Sections
-import SectionHero from "../src/sections/SectionHero";
+import SectionHero from "../components/sections/SectionHero";
 
 export default function Home({ countries }) {
   return (
