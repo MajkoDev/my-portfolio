@@ -7,7 +7,7 @@ import "@fontsource/open-sans/800.css";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../styles/theme";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {

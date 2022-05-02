@@ -1,9 +1,7 @@
 import NextLink from "next/link";
 import {
   Stack,
-  Box,
   VStack,
-  PseudoBox,
   Divider,
   Link,
   Flex,
@@ -14,7 +12,7 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 
-const Footer2 = () => {
+const Footer = () => {
   return (
     <Stack as='footer' pb='8' spacing='8'>
       <Divider />
@@ -126,4 +124,4 @@ const Footer2 = () => {
   );
 };
 
-export default Footer2;
+export default Footer;

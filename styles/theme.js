@@ -17,12 +17,11 @@ const breakpoints = {
 const theme = extendTheme({
   // fonts
   fonts: {
-    heading: 'Open Sans, sans-serif',
-    body: 'Open Sans, sans-serif',
+    heading: "Open Sans, sans-serif",
+    body: "Open Sans, sans-serif",
   },
   // customize colors
   colors: {
-   
     blue: {
       50: "#99c8ff",
       100: "#bdd6f4",
@@ -47,9 +46,9 @@ const theme = extendTheme({
       800: "#450515",
       900: "#1e0006",
     },
-    linear:{
-      1: "linear-gradient(90deg, #E70B9C -20.91%, #2C16B5 122.73%)"
-    }
+    linear: {
+      1: "linear-gradient(90deg, #E70B9C -20.91%, #2C16B5 122.73%)",
+    },
   },
 
   styles: {
