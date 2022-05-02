@@ -1,28 +1,25 @@
 import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
+
 // Sections
 import SectionAbout from "../src/sections/SectionAbout";
 import SectionSkills from "../src/sections/SectionSkills";
 
+// Apollo Client
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-const About = ({ abouts, skills }) => {
-  
-  
+// Page
+const About = ({ abouts, skills, softwares }) => {
   return (
     <Stack h='full' w='full'>
       <Head>
         <title>MajkoDev - O mne</title>
       </Head>
-      
-      
       <SectionAbout abouts={abouts} />
-
-      <SectionSkills skills={skills} />
+      <SectionSkills skills={skills} softwares={softwares} />
     </Stack>
   );
 };
-
 export default About;
 
 const client = new ApolloClient({
@@ -31,7 +28,6 @@ const client = new ApolloClient({
 });
 
 export async function getServerSideProps() {
-
   const { data: abouts } = await client.query({
     query: gql`
       query Abouts {
@@ -42,7 +38,7 @@ export async function getServerSideProps() {
             text
           }
           alignment
-        }      
+        }
       }
     `,
   });
@@ -61,14 +57,27 @@ export async function getServerSideProps() {
     `,
   });
 
+  const { data: softwares } = await client.query({
+    query: gql`
+      query Softwares {
+        softwares {
+          title
+          description {
+            markdown
+          }
+          icon {
+            url
+          }
+        }
+      }
+    `,
+  });
+
   return {
     props: {
-      abouts, skills
+      abouts,
+      skills,
+      softwares,
     },
   };
-
-
-
 }
-
-

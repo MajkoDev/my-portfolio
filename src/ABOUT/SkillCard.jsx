@@ -58,6 +58,7 @@ const SkillCard = ({ id, title, description }) => {
       </motion.div>
     </WrapItem>
   );
+  
 };
 
 export default SkillCard;

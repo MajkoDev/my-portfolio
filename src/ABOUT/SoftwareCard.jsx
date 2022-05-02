@@ -2,7 +2,7 @@ import {
   Flex,
   Stack,
   Box,
-  Heading,
+  Heading, Container,
   Text,
   useColorModeValue,
   WrapItem,
@@ -10,9 +10,13 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const SoftwareCard = ({ icon }) => {
+const SoftwareCard = ({ icon, title, description }) => {
   const color = useColorModeValue("blue.800", "blue.800");
   const bg = useColorModeValue("white", "gray.200");
+  const responsive = {
+    w: "100%",
+    h: "auto",
+  };
 
   return (
     <WrapItem>
@@ -27,13 +31,20 @@ const SoftwareCard = ({ icon }) => {
           <Flex
             align='center'
             direction={{ base: "column", md: "column", lg: "row" }}>
-            <Stack w='100px' mr={{ base: "0", md: "4" }} >
-              <Box mb={{base: '4', lg: '0'}}>
-              <Image
-                alt='Icon'  layout="responsive"
-                src={icon}></Image>
-              </Box>
+            <Stack w='100px' mr={{ base: "0", md: "4" }}>
+
+
               
+              <Box mb={{ base: "4", lg: "0" }}>
+                {/* <Image
+                alt='Icon'  layout="responsive"
+                src={icon}></Image> */}
+                <img
+                  src={icon}
+                  sx={{ maxW: "100%" }}
+                  alt={`${title} Cover Image`}
+                />
+              </Box>
             </Stack>
 
             <Stack>
@@ -41,12 +52,10 @@ const SoftwareCard = ({ icon }) => {
                 color={color}
                 align={{ base: "center", lg: "start" }}
                 fontSize={{ base: "lg", md: "lg" }}>
-                Visual Studio Code
+                {title}
               </Heading>
               <Text color={color} fontSize={{ base: "sm", md: "sm" }}>
-                Visual Studio Code je kódovací editor. Bezplatný. Open-source,
-                takže ho môžeme vylepšovať. Jednoduchý a intuitívny. Nehovoriac
-                o tom, že ponúka tisíce najrôznejších rozšírení.
+                {description}
               </Text>
             </Stack>
           </Flex>

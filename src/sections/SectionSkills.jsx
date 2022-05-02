@@ -13,71 +13,55 @@ import SoftwareCard from "../ABOUT/SoftwareCard";
 import SkillCard from "../ABOUT/SkillCard";
 
 // images
-import vsc from "../../public/icons/icon-vsc.jpg";
-import visual from "../../public/icons/visual.svg";
-import figma from "../../public/icons/figma_logo_icon.svg";
+import visual from "../../public/prototype/visual-svgrepo.svg";
+import figma from "../../public/prototype/figma-svgrepo.svg";
 
-const SectionSkills = ({ skills }) => {
-  const techs = skills.skills;
-  console.log(techs);
+const SectionSkills = ({ skills, softwares }) => {
+  const abilities = skills.skills;
+
+  const technologies = softwares.softwares;
+
+  console.log(technologies);
 
   return (
     <Stack h='full' w='full'>
-      {/* SECTION TITLE */}
-      <SectionTitle
-        title='Schopnosti.'
-        subtitle='vedomosti, technologie, jazyky, nástroje'
-      />
+      <SectionTitle title='Schopnosti.' subtitle='vedomosti, technologie, jazyky, nástroje' />
+
+
 
       {/* SECTION OF SOFTWARE */}
-
-      <Stack
-        display='flex'
-        id='skills'
-        align={{ base: "center", lg: "start" }}
-        direction={{ base: "column", lg: "row" }}
-        pb='50px'>
-        <SkillTitle software='Technologie' />
+      <Stack display='flex' id='skills' align={{ base: "center", lg: "start" }} direction={{ base: "column", lg: "row" }} pb='50px'>
+      <SkillTitle software='Technologie' />
 
         <Wrap justify='center' align='center'>
-          <SoftwareCard icon={visual} />
-          <SoftwareCard icon={figma} />
+
+         {technologies.map((technology, i) => (
+            <SoftwareCard key={i} 
+              title={technology.title}
+              description={technology.description.markdown}
+              icon={technology.icon.url} />
+          ))} 
+
+          
+          
         </Wrap>
       </Stack>
 
+
       {/* SECTION OF SKILLS */}
-      <Stack
-        display='flex'
-        id='languages'
-        align={{ base: "center", lg: "start" }}
-        direction={{ base: "column", lg: "row" }}
-        pb='50px'>
-        <SkillTitle software='Schopnosti' />
+      <Stack display='flex' id='languages' align={{ base: "center", lg: "start" }} direction={{ base: "column", lg: "row" }} pb='50px'>
+      <SkillTitle software='Schopnosti' />
 
         <Wrap justify='center' align='center'>
-          
-            {techs.map((tech, i) => (
-              <SkillCard
-              key={i}
-              id={tech.idNumber}
-              title={tech.title}
-              description={tech.description.markdown}
-            />
-            ))}
-          
-          
-          
 
-          {/* <SkillCard
-            id='2'
-            title='dizajnovanie.'
-            description='viem Css a hneď ako som objavil Sass, zamiloval som si ho. využil som Tailwind Css, Chakra Ui, Bootstrap 5… čoskoro pridám aj Material Ui. pri práci s Reactom som použil Styled-Comp aj Css-in-Js. mal by som začať využívať Storybook viacej.'
-          />
-          <SkillCard
-            id='3'
-            title='Front-End.'
-            description='venujem sa Reactu a jeho ekosystemu. potom ako sa človek naučí základy (hooks, context, router), vzdeláva sa podľa potreby. tvoril som projekty pomocou Gatsby a Next.js.'
-          /> */}
+          {abilities.map((ability, i) => (
+            <SkillCard
+              key={i}
+              id={ability.idNumber}
+              title={ability.title}
+              description={ability.description.markdown}
+            />
+          ))}
         </Wrap>
       </Stack>
     </Stack>

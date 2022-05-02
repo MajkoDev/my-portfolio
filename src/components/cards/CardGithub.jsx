@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
 const CardGithub = (item) => {
   const colorTitle = useColorModeValue("gray.800", "gray.200");
 
-  console.log(item.primaryLanguage.name)
+  // console.log(item.primaryLanguage.name)
   return (
     <WrapItem>
       <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>

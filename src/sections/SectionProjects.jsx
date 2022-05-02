@@ -7,7 +7,19 @@ import SectionTitle from "../elements/SectionTitle";
 // Components
 import ProjectCardTwo from "../components/cards/ProjectCardTwo";
 
-const SectionProjects = () => {
+// Apollo Client
+import {
+  ApolloClient,
+  createHttpLink,
+  InMemoryCache,
+  gql,
+} from "@apollo/client";
+import client from "../../apolloClient"
+
+const SectionProjects = ({projects}) => {
+
+  console.log(projects)
+  
   return (
     <Stack h='full' w='full'>
       <SectionTitle title='projekty.' subtitle='Čo som naposledy vytvoril?' />
@@ -21,3 +33,27 @@ const SectionProjects = () => {
 };
 
 export default SectionProjects;
+
+export async function getServerSideProps(){
+  const {data: projects} = await client.query({
+    query: gpl`
+      query Projects {
+      projects {
+        id
+        title
+        subtitle
+        description
+        deployedAt
+      }
+    }
+    `
+  })
+
+  
+
+  return{
+    props: {
+      projects
+    }
+  }
+}

@@ -12,6 +12,8 @@ import {
   InMemoryCache,
   gql,
 } from "@apollo/client";
+import client from "../apolloClient"
+
 import { setContext } from "@apollo/client/link/context";
 
 // Page
@@ -26,6 +28,9 @@ export default function Portfolio({ pinnedItems }) {
     </Stack>
   );
 }
+
+
+
 
 // Github Repositories
 export async function getStaticProps() {
@@ -42,12 +47,10 @@ export async function getStaticProps() {
     };
   });
 
-  
   const client = new ApolloClient({
     link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
   });
-
 
   const { data } = await client.query({
     query: gql`
@@ -77,8 +80,6 @@ export async function getStaticProps() {
 
   const { user } = data;
   const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node);
-  // console.log(pinnedItems.name)
-
   return {
     props: {
       pinnedItems,
