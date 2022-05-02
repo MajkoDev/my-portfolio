@@ -85,30 +85,3 @@ const SectionSkills = ({ skills }) => {
 };
 
 export default SectionSkills;
-
-// const client = new ApolloClient({
-//   uri: "https://api-eu-west-2.graphcms.com/v2/cl2ghbbmv33qh01z629r9erpf/master",
-//   cache: new InMemoryCache(),
-// });
-
-// export async function getServerSideProps() {
-//   const { data: skills } = await client.query({
-//     query: gql`
-//       query Skills {
-//         skills {
-//           title
-//           description {
-//             markdown
-//           }
-//           idNumber
-//         }
-//       }
-//     `,
-//   });
-
-//   return {
-//     props: {
-//       skills: data.skills,
-//     },
-//   };
-// }

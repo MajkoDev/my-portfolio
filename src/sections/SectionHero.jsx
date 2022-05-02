@@ -1,15 +1,13 @@
 import {
   Heading,
-  Link,
-  Flex, HStack,
+  Flex, 
   Box,
   AspectRatio,
   Stack,
-  Text,
+  Text
 } from "@chakra-ui/react";
 import avatar from "../../public/images/avatar.gif";
 import NextImage from "next/image";
-import {BiCopy} from "react-icons/bi"
 import EmailCopy from "../elements/EmailCopy"
 
 const SectionHero = () => {
