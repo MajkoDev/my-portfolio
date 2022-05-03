@@ -1,7 +1,11 @@
+// Chakra Ui
 import { Heading, Flex, Box, AspectRatio, Stack, Text } from "@chakra-ui/react";
-import avatar from "../../public/images/avatar.gif";
+// Next.js
 import NextImage from "next/image";
+// Elements
 import EmailCopy from "../elements/EmailCopy";
+// Publi Files
+import avatar from "../../public/images/avatar.gif";
 
 const SectionHero = () => {
   return (

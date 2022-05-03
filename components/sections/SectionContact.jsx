@@ -1,12 +1,8 @@
-import {
-  Box,
-  Stack,
-  Center,
-  useColorModeValue,
-} from "@chakra-ui/react";
-
+// Chakra Ui
+import { Box, Stack, Center, useColorModeValue } from "@chakra-ui/react";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
+// Form
 import ContactForm from "../form/ContactForm";
 
 const SectionContact = () => {

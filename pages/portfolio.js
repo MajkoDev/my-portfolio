@@ -2,8 +2,8 @@ import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
 
 // Sections
+import SectionProjects from "../components/sections/SectionProjects";
 import SectionGithub from "../src/sections/SectionGithub";
-import SectionProjects from "../src/sections/SectionProjects";
 
 // Apollo Client
 import {
@@ -12,12 +12,11 @@ import {
   InMemoryCache,
   gql,
 } from "@apollo/client";
-import client from "../apolloClient"
+import client from "../apolloClient";
 import { setContext } from "@apollo/client/link/context";
 
 // Page
 export default function Portfolio({ projects, pinnedItems }) {
-  
   return (
     <Stack h='full' w='full'>
       <Head>
@@ -29,15 +28,9 @@ export default function Portfolio({ projects, pinnedItems }) {
   );
 }
 
-
-
-
-
-
 export async function getStaticProps() {
 
   // Projects
-
   const client = new ApolloClient({
     uri: "https://api-eu-west-2.graphcms.com/v2/cl2ghbbmv33qh01z629r9erpf/master",
     cache: new InMemoryCache(),
@@ -53,11 +46,13 @@ export async function getStaticProps() {
           description
           deployedAt
           link
+          image {
+            url
+          }
         }
       }
     `,
   });
-
 
   // Github Repositories
 
