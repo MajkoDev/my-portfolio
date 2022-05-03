@@ -3,7 +3,6 @@ import { Wrap, Stack } from "@chakra-ui/react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 // Elements
-// = TitleSection TitleSkill
 import SectionTitle from "../elements/SectionTitle";
 import SkillTitle from "../ABOUT/SkillTitle";
 
@@ -13,8 +12,8 @@ import SoftwareCard from "../ABOUT/SoftwareCard";
 import SkillCard from "../ABOUT/SkillCard";
 
 // images
-import visual from "../../public/prototype/visual-svgrepo.svg";
-import figma from "../../public/prototype/figma-svgrepo.svg";
+// import visual from "../../public/prototype/visual-svgrepo.svg";
+// import figma from "../../public/prototype/figma-svgrepo.svg";
 
 const SectionSkills = ({ skills, softwares }) => {
   const abilities = skills.skills;

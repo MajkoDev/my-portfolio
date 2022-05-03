@@ -17,6 +17,7 @@ const SoftwareCard = ({ icon, title, description }) => {
     w: "100%",
     h: "auto",
   };
+  
 
   return (
     <WrapItem>

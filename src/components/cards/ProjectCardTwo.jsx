@@ -1,9 +1,7 @@
 import {
-  VStack,
   Box,
   Heading, WrapItem,
   Spacer,
-  Stack,
   Text,
   Flex,
   Link,
@@ -13,7 +11,11 @@ import Image from "next/image";
 import mac from "../../../public/images/mac.jpg";
 import { motion } from "framer-motion";
 
-const ProjectCardTwo = () => {
+
+
+const ProjectCardTwo = ({title, subtitle, description, link}) => {
+  
+
   return (
     <WrapItem>
             <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>
@@ -55,10 +57,10 @@ const ProjectCardTwo = () => {
                 textTransform='uppercase'
                 fontSize={{ base: "xs", md: "sm" }}
                 fontWeight={800}>
-                Portfolio
+                {subtitle}
               </Text>
               <Heading mt='2' fontSize={{ base: "lg", md: "xl" }}>
-                MajkoDev_ front-end developer
+                {title}
               </Heading>
 
               <Text
@@ -66,18 +68,17 @@ const ProjectCardTwo = () => {
                 fontWeight={400}
                 mt='1'
                 mr='4'>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+                {description}
               </Text>
               <Spacer />
 
               <HStack justify='end'>
                 <Link
+                href={link}
                   fontSize={{ base: "sm", md: "sm" }}
                   fontWeight={600}
                   m='2'>
-                  View Website
+                  Navštív stránku
                 </Link>
               </HStack>
             </Flex>

@@ -7,6 +7,7 @@ import CardGithub from "../components/cards/CardGithub";
 import SectionTitle from "../elements/SectionTitle";
 import GithubLink from "../elements/GithubLink";
 
+
 export default function SectionGithub({ pinnedItems }) {
   return (
     <Stack h='full' w='full'>
@@ -29,3 +30,4 @@ export default function SectionGithub({ pinnedItems }) {
     </Stack>
   );
 }
+
