@@ -7,13 +7,8 @@ import SectionTitle from "../elements/SectionTitle";
 import SkillTitle from "../ABOUT/SkillTitle";
 
 // Card Components
-// = SoftwareCard, SkillCard
 import SoftwareCard from "../ABOUT/SoftwareCard";
 import SkillCard from "../ABOUT/SkillCard";
-
-// images
-// import visual from "../../public/prototype/visual-svgrepo.svg";
-// import figma from "../../public/prototype/figma-svgrepo.svg";
 
 const SectionSkills = ({ skills, softwares }) => {
   const abilities = skills.skills;
