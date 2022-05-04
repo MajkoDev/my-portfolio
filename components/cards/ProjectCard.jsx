@@ -10,8 +10,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 // Next.js
-import Image from "next/image";
-import mac from "../../public/images/mac.jpg";
+import NextLink from "next/link";
 // Framer Motion
 import { motion } from "framer-motion";
 
@@ -20,34 +19,27 @@ const ProjectCard = ({ title, subtitle, description, link, image }) => {
     <WrapItem>
       <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>
         <Box
-          h={{ base: "400px", md: "264px" }}
+          bg='gray.100'
+          h='full'
           w={{ base: "md", md: "2xl" }}
-          rounded='md'
+          rounded='lg'
           mb='10'
           boxShadow='2xl'
           overflow='hidden'>
           <Flex direction={{ base: "column", md: "row" }}>
             <Box
-              w={{ base: "full", md: "45%" }}
-              h={{ base: "240", md: "264px" }}
-              position='relative'>
-                
-                
-               
-              <Image
-                alt='Project Image'
-                src={mac}
-                layout='fill'
-                objectFit='cover'
-                quality={100}
-              /> 
+              w={{ base: "full", md: "100%" }}
+              h={{ base: "full", md: "100%" }}
+              position='relative'
+              borderColor='gray.400'>
+              <img alt='Project Image' src={image.url} width='100%' />
             </Box>
 
             <Box
               px='4'
               py={{ base: "2", md: "6" }}
               w={{ base: "full", md: "55%" }}
-              h={{ base: "160", md: "264px" }}>
+              h={{ base: "full", md: "264px" }}>
               <Flex
                 direction='column'
                 h='full'
@@ -64,7 +56,6 @@ const ProjectCard = ({ title, subtitle, description, link, image }) => {
                 <Heading mt='2' fontSize={{ base: "lg", md: "xl" }}>
                   {title}
                 </Heading>
-
                 <Text
                   fontSize={{ base: "xs", md: "sm" }}
                   fontWeight={400}
@@ -75,13 +66,16 @@ const ProjectCard = ({ title, subtitle, description, link, image }) => {
                 <Spacer />
 
                 <HStack justify='end'>
-                  <Link
-                    href={link}
-                    fontSize={{ base: "sm", md: "sm" }}
-                    fontWeight={600}
-                    m='2'>
-                    Navštív stránku
-                  </Link>
+                  <NextLink href={link} passHref>
+                    <a target='_blank' rel='noreferrer'>
+                      <Link
+                        fontWeight='semibold'
+                        fontSize={{ base: "sm", md: "sm" }}
+                        m='2'>
+                        Navštív stránku
+                      </Link>
+                    </a>
+                  </NextLink>
                 </HStack>
               </Flex>
             </Box>
