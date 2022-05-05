@@ -2,8 +2,8 @@ import Head from "next/head";
 import { Stack } from "@chakra-ui/react";
 
 // Sections
-import SectionAbout from "../src/sections/SectionAbout";
-import SectionSkills from "../src/sections/SectionSkills";
+import SectionAbout from "../components/sections/SectionAbout";
+import SectionSkills from "../components/sections/SectionSkills";
 
 // Apollo Client
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
