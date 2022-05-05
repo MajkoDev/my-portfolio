@@ -1,7 +1,7 @@
 import { Center, Stack, Wrap } from "@chakra-ui/react";
 
 // Components
-import CardGithub from "../components/cards/CardGithub";
+import CardGithub from "../cards/CardGithub";
 
 // Elements
 import SectionTitle from "../elements/SectionTitle";

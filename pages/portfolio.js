@@ -3,7 +3,7 @@ import { Stack } from "@chakra-ui/react";
 
 // Sections
 import SectionProjects from "../components/sections/SectionProjects";
-import SectionGithub from "../src/sections/SectionGithub";
+import SectionGithub from "../components/sections/SectionGithub";
 
 // Apollo Client
 import {
