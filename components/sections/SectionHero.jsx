@@ -7,6 +7,7 @@ import EmailCopy from "../elements/EmailCopy";
 // Publi Files
 import avatar from "../../public/images/avatar.gif";
 
+
 const SectionHero = () => {
   return (
     <Flex

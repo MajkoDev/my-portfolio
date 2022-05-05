@@ -9,6 +9,7 @@ import SkillTitle from "../elements/SkillTitle";
 import SoftwareCard from "../cards/SoftwareCard";
 import SkillCard from "../cards/SkillCard";
 
+
 const SectionSkills = ({ skills, softwares }) => {
   const abilities = skills.skills;
   const technologies = softwares.softwares;
@@ -17,7 +18,7 @@ const SectionSkills = ({ skills, softwares }) => {
     <Stack h='full' w='full'>
       <SectionTitle title='Schopnosti.' subtitle='vedomosti, technologie, jazyky, nástroje' />
 
-      {/* SECTION OF SOFTWARE */}
+      {/* SECTION OF TECHNOLOGIES */}
       <Stack display='flex' id='skills' align={{ base: "center", lg: "start" }} direction={{ base: "column", lg: "row" }} pb='50px'>
       <SkillTitle software='Technologie' />
         <Wrap justify='center' align='center'>
@@ -30,7 +31,7 @@ const SectionSkills = ({ skills, softwares }) => {
         </Wrap>
       </Stack>
 
-      {/* SECTION OF SKILLS */}
+      {/* SECTION OF ABILITIES */}
       <Stack display='flex' id='languages' align={{ base: "center", lg: "start" }} direction={{ base: "column", lg: "row" }} pb='50px'>
       <SkillTitle software='Schopnosti' />
         <Wrap justify='center' align='center'>

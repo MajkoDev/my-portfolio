@@ -1,7 +1,5 @@
 import { Link, HStack, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import { BiCopy } from "react-icons/bi";
-//  import { BxCopy } from  'boxicons'
 import { IoCopy, IoCopyOutline } from "react-icons/io5";
 
 const EmailCopy = () => {

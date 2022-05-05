@@ -2,12 +2,12 @@ import {
   Flex,
   Stack,
   Box,
-  Heading, Container,
+  Heading,
+  Container,
   Text,
   useColorModeValue,
   WrapItem,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const SoftwareCard = ({ icon, title, description }) => {
@@ -17,7 +17,6 @@ const SoftwareCard = ({ icon, title, description }) => {
     w: "100%",
     h: "auto",
   };
-  
 
   return (
     <WrapItem>
@@ -33,13 +32,7 @@ const SoftwareCard = ({ icon, title, description }) => {
             align='center'
             direction={{ base: "column", md: "column", lg: "row" }}>
             <Stack w='100px' mr={{ base: "0", md: "4" }}>
-
-
-              
               <Box mb={{ base: "4", lg: "0" }}>
-                {/* <Image
-                alt='Icon'  layout="responsive"
-                src={icon}></Image> */}
                 <img
                   src={icon}
                   sx={{ maxW: "100%" }}

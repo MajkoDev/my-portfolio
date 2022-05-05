@@ -1,9 +1,10 @@
 // Chakra Ui
-import { Stack, Wrap, Box, Image } from "@chakra-ui/react";
+import { Stack, Wrap } from "@chakra-ui/react";
 // Elements
 import SectionTitle from "../elements/SectionTitle";
 // Components
 import ProjectCard from "../cards/ProjectCard";
+
 
 const SectionProjects = ({ projects }) => {
   const works = projects.projects;

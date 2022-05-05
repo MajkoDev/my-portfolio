@@ -11,14 +11,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { FiCodesandbox } from "react-icons/fi";
 import { ImGithub } from "react-icons/im";
 import { motion } from "framer-motion";
 
 const CardGithub = (item) => {
   const colorTitle = useColorModeValue("gray.800", "gray.200");
 
-  // console.log(item.primaryLanguage.name)
   return (
     <WrapItem>
       <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>
@@ -40,46 +38,28 @@ const CardGithub = (item) => {
                       <Heading size='sm'>{item.name}</Heading>
                     </a>
                   </NextLink>
-
                   <Spacer />
-
-
-                    {/* Codesandbox */}
-                  {/* <NextLink href='/' passHref>
-                    <Link fontWeight='600' fontSize='xs'>
-                      <HStack>
-                        <FiCodesandbox m='2' />
-                        <Text>CodeSandBox</Text>
-                      </HStack>
-                    </Link>
-                  </NextLink> */}
-
-
-
                 </Flex>
-
                 <Text fontSize='xs' mb='5'>
                   {item.description}
                 </Text>
                 <Spacer />
-
                 <HStack mr='2'>
-                   <Text fontSize='xs' fontWeight='semibold'>
-                   {item.primaryLanguage.name}
-                  </Text> 
+                  <Text fontSize='xs' fontWeight='semibold'>
+                    {item.primaryLanguage.name}
+                  </Text>
                   <Spacer />
-
-                   <NextLink href={item.url} passHref>
-              <a target='_blank' rel='noreferrer'>
-                <Button
-                  variant='ghost'
-                  borderRadius='60px'
-                  size='sm'
-                  borderColor='gray.600'>
-                  <ImGithub />{" "}
-                </Button>
-              </a>
-            </NextLink> 
+                  <NextLink href={item.url} passHref>
+                    <a target='_blank' rel='noreferrer'>
+                      <Button
+                        variant='ghost'
+                        borderRadius='60px'
+                        size='sm'
+                        borderColor='gray.600'>
+                        <ImGithub />{" "}
+                      </Button>
+                    </a>
+                  </NextLink>
                 </HStack>
               </Stack>
             </a>

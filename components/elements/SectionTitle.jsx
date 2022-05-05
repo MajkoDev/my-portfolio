@@ -1,4 +1,4 @@
-import { Box, Divider, Heading, Stack, Text } from "@chakra-ui/react";
+import { Divider, Heading, Stack, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const SelectTitle = styled(Heading)`

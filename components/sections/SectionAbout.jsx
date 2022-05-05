@@ -1,11 +1,11 @@
+// Chakra Ui
 import { Stack, VStack, Flex } from "@chakra-ui/react";
-
 // Components
 import AboutCard from "../cards/AboutCard";
 import AboutCardSec from "../cards/AboutCardSec";
-
 // Elements
 import SectionTitle from "../elements/SectionTitle";
+
 
 const SectionAbout = ({ abouts }) => {
   const aboutme = abouts.abouts;

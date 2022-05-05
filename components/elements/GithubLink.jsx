@@ -12,9 +12,7 @@ export default function GithubLink() {
               <Heading fontSize={{ base: "lg", md: "2xl" }} fontWeight={300}>
                 navštív môj{" "}
               </Heading>
-
               <Heading fontSize={{ base: "lg", md: "2xl" }}>GitHub</Heading>
-
               <Box ml='1'>
                 <ImGithub size='22' />
               </Box>
