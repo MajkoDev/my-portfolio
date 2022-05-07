@@ -1,4 +1,5 @@
 import Head from "next/head";
+// Chakra Ui
 import { Stack, Center, Heading } from "@chakra-ui/react";
 
 export default function Custom404() {
