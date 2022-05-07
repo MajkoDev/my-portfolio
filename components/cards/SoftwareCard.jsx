@@ -3,11 +3,13 @@ import {
   Stack,
   Box,
   Heading,
-  Container,
   Text,
   useColorModeValue,
   WrapItem,
 } from "@chakra-ui/react";
+// Next.js
+import Image from 'next/image'
+// Framer Motion
 import { motion } from "framer-motion";
 
 const SoftwareCard = ({ icon, title, description }) => {
@@ -17,6 +19,10 @@ const SoftwareCard = ({ icon, title, description }) => {
     w: "100%",
     h: "auto",
   };
+
+  const loaderProp =({ src }) => {
+    return src;
+  }
 
   return (
     <WrapItem>
@@ -33,9 +39,11 @@ const SoftwareCard = ({ icon, title, description }) => {
             direction={{ base: "column", md: "column", lg: "row" }}>
             <Stack w='100px' mr={{ base: "0", md: "4" }}>
               <Box mb={{ base: "4", lg: "0" }}>
-                <img
+                <Image
                   src={icon}
-                  sx={{ maxW: "100%" }}
+                  loader={loaderProp}
+                  width={500} 
+                  height={500}
                   alt={`${title} Cover Image`}
                 />
               </Box>

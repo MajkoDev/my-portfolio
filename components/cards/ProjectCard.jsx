@@ -11,6 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 // Next.js
+import Image from 'next/image'
 import NextLink from "next/link";
 // Framer Motion
 import { motion } from "framer-motion";
@@ -18,6 +19,11 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ title, subtitle, description, link, image }) => {
   const colorText = useColorModeValue("gray.800", "gray.900");
   const colorBg = useColorModeValue("gray.100", "gray.300");
+
+  const loaderProp =({ src }) => {
+    return src;
+  }
+
   return (
     <WrapItem>
       <motion.div whileHover={{ scale: 1.03 }} transition={{ ease: "easeOut" }}>
@@ -27,15 +33,21 @@ const ProjectCard = ({ title, subtitle, description, link, image }) => {
           w={{ base: "md", md: "2xl" }}
           rounded='lg'
           mb='10'
+          pb={{base:'2', md: '0'}}
           boxShadow='2xl'
           overflow='hidden'>
           <Flex direction={{ base: "column", md: "row" }}>
             <Box
               w={{ base: "full", md: "100%" }}
-              h={{ base: "full", md: "100%" }}
+              h={{ base: "full", md: "100" }}
               position='relative'
-              borderColor='gray.400'>
-              <img alt='Project Image' src={image.url} width='100%' />
+              borderColor='gray.400' >
+                <Image src={image.url} loader={loaderProp}  width={500}
+      height={320} />
+              {/* <img alt='Project Image' src={image.url} width='100%' /> */}
+
+              
+              
             </Box>
             <Box
               px='4'
