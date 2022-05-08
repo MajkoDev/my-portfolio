@@ -9,7 +9,6 @@ import SkillTitle from "../elements/SkillTitle";
 import SoftwareCard from "../cards/SoftwareCard";
 import SkillCard from "../cards/SkillCard";
 
-
 const SectionSkills = ({ skills, softwares }) => {
   const abilities = skills.skills;
   const technologies = softwares.softwares;

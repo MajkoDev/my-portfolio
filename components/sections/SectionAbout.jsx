@@ -14,6 +14,7 @@ const SectionAbout = ({ abouts }) => {
     <Stack h='full' w='full'>
       <SectionTitle title='O mne.' subtitle='Čo o sebe prezradím?' />
 
+
       <VStack>
         <AboutCard
           titleAlignment='start'

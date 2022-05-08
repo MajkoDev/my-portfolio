@@ -12,7 +12,6 @@ import {
   InMemoryCache,
   gql,
 } from "@apollo/client";
-import client from "../apolloClient";
 import { setContext } from "@apollo/client/link/context";
 
 // Page
