@@ -42,11 +42,11 @@ const ProjectCard = ({ title, subtitle, description, link, image }) => {
               h={{ base: "full", md: "100" }}
               position='relative'
               borderColor='gray.400' >
-                <Image src={image.url} loader={loaderProp}  width={500}
-      height={320} />
-              {/* <img alt='Project Image' src={image.url} width='100%' /> */}
-
-              
+                <Image 
+                  src={image.url} 
+                  loader={loaderProp}  
+                  width={500}
+                  height={320} />
               
             </Box>
             <Box
