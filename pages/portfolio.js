@@ -6,13 +6,7 @@ import SectionProjects from "../components/sections/SectionProjects";
 import SectionGithub from "../components/sections/SectionGithub";
 
 // Apollo Client
-import {
-  ApolloClient,
-  createHttpLink,
-  InMemoryCache,
-  gql,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 // Page
 export default function Portfolio({ projects, pinnedItems }) {
@@ -28,8 +22,6 @@ export default function Portfolio({ projects, pinnedItems }) {
 }
 
 export async function getStaticProps() {
-
-  // Projects
   const client = new ApolloClient({
     uri: "https://api-eu-west-2.graphcms.com/v2/cl2ghbbmv33qh01z629r9erpf/master",
     cache: new InMemoryCache(),
@@ -53,54 +45,18 @@ export async function getStaticProps() {
     `,
   });
 
-  // Github Repositories
-
-  const httpLink = createHttpLink({
-    uri: "https://api.github.com/graphql",
-  });
-
-  const authLink = setContext((_, { headers }) => {
-    return {
-      headers: {
-        ...headers,
-        authorization: `Bearer ${process.env.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}`,
-      },
-    };
-  });
-
-  const clientGithub = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  });
-
-  const { data } = await clientGithub.query({
+  const { data: pinnedItems } = await client.query({
     query: gql`
-      {
-        user(login: "MajkoDev") {
-          pinnedItems(first: 6) {
-            totalCount
-            edges {
-              node {
-                ... on Repository {
-                  id
-                  name
-                  url
-                  description
-                  primaryLanguage {
-                    name
-                    color
-                  }
-                }
-              }
-            }
-          }
+      query Github {
+        githubs {
+          title
+          link
+          language
+          description
         }
       }
     `,
   });
-
-  const { user } = data;
-  const pinnedItems = user.pinnedItems.edges.map((edge) => edge.node);
 
   return {
     props: {
