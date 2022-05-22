@@ -14,7 +14,7 @@ import NextLink from "next/link";
 import { ImGithub } from "react-icons/im";
 import { motion } from "framer-motion";
 
-const CardGithub = (item) => {
+const CardGithub = ({ title, link, language, description }) => {
   const colorTitle = useColorModeValue("gray.800", "gray.200");
 
   return (
@@ -27,29 +27,29 @@ const CardGithub = (item) => {
           color={colorTitle}
           rounded='md'
           p='3'
-          minH='100px'
+          maxH='200px'
           maxW='360px'>
-          <NextLink href={item.url} passHref>
+          <NextLink href={link} passHref>
             <a target='_blank' rel='noreferrer'>
               <Stack w='300px' mx='4' alignContent='stretch'>
                 <Flex justify='center' align='center' mb='2' mr='2'>
-                  <NextLink href={item.url} passHref>
+                  <NextLink href={link} passHref>
                     <a target='_blank' rel='noreferrer'>
-                      <Heading size='sm'>{item.name}</Heading>
+                      <Heading size='sm'>{title}</Heading>
                     </a>
                   </NextLink>
                   <Spacer />
                 </Flex>
                 <Text fontSize='xs' mb='5'>
-                  {item.description}
+                  {description}
                 </Text>
                 <Spacer />
                 <HStack mr='2'>
-                  <Text fontSize='xs' fontWeight='semibold'>
-                    {item.primaryLanguage.name}
+                  <Text fontSize='sm' fontWeight='semibold'>
+                    {language}
                   </Text>
                   <Spacer />
-                  <NextLink href={item.url} passHref>
+                  <NextLink href={link} passHref>
                     <a target='_blank' rel='noreferrer'>
                       <Button
                         variant='ghost'

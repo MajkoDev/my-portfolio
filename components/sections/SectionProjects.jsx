@@ -5,12 +5,11 @@ import SectionTitle from "../elements/SectionTitle";
 // Components
 import ProjectCard from "../cards/ProjectCard";
 
-
 const SectionProjects = ({ projects }) => {
   const works = projects.projects;
   return (
     <Stack h='full' w='full'>
-      <SectionTitle title='projekty.' subtitle='Čo som naposledy vytvoril?' />
+      <SectionTitle title='Projekty.' subtitle='Čo som naposledy vytvoril?' />
       <Wrap spacing='24px' w='full' justify='center'>
         {works.map((work, i) => (
           <ProjectCard
